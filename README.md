@@ -2,6 +2,8 @@
 
 Este proyecto se ha realizado para ayudar a la comunidad de habla hispana en el desarrollo web con el framework bootstrap de twitter. 
 
+[Página del proyecto.](http://internoma.github.com/tutorial-bootstrap/)
+
 Actualmente está en desarrollo, pronto estará más completo. 
 
 Abordaremos la nueva versión de twitter bootstrap, a ver si tengo tiempo para todo esto.
