@@ -1,0 +1,797 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Less · Twitter Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body data-spy="scroll" data-target=".subnav" data-offset="50">
+
+
+  <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="./index.html">Bootstrap</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="./index.html">Inicio</a>
+              </li>
+              <li class="">
+                <a href="./scaffolding.html">Adaptable</a>
+              </li>
+              <li class="">
+                <a href="./base-css.html">Base CSS</a>
+              </li>
+              <li class="">
+                <a href="./components.html">Componentes</a>
+              </li>
+              <li class="">
+                <a href="./javascript.html">Javascript plugins</a>
+              </li>
+              <li class="active">
+                <a href="./less.html">Usando LESS</a>
+              </li>
+              <li class="divider-vertical"></li>
+              <li class="">
+                <a href="./download.html">Personalizar</a>
+              </li>
+              <li class="">
+                <a href="./examples.html">Ejemplos</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+<!-- Masthead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+  <h1>Usar LESS con Bootstrap</h1>
+  <p class="lead">Personaliza y expande Bootstrap con <a href="http://lesscss.org" target="_blank">LESS</a> un preprocesador CSS, para tomar ventaja de las variables, las mezclas y dem&aacute;s utilizado para crear CSS de Boostrap.</p>
+  <div class="subnav">
+    <ul class="nav nav-pills">
+      <li><a href="#builtWith">Crear con  LESS</a></li>
+      <li><a href="#variables">Variables</a></li>
+      <li><a href="#mixins">Mezclas</a></li>
+      <li><a href="#compiling">Compilar Bootstrap</a></li>
+    </ul>
+  </div>
+</header>
+
+
+
+<!-- BUILT WITH LESS
+================================================== -->
+<section id="builtWith">
+  <div class="page-header">
+    <h1>Crear con  LESS</h1>
+  </div>
+  <div class="row">
+    <div class="span4">
+      <h3>&iquest;Por qu&eacute; LESS?</h3>
+      <p>Boostrap se ha hecho con LESS desde el interior, un lenguage de hoja de estilo din&aacute;mico creado por nuestro buen amigo <a href="http://cloudhead.io">Alexis Sellier</a>. Hace que el desarrollo de los sistemas basados en CSS sean m&aacute;s r&aacute;pidos, f&aacute;ciles y divertidos.</p>
+    </div>
+    <div class="span4">
+      <h3>&iquest;Qu&eacute; se incluye?</h3>
+      <p>Como extensi&oacute;n de CSS, LESS incluye variables, mezclas para fragmentos de c&oacute;digo reutilizables, operaciones de matem&aacute;ticas simples, anidaciones e incluso funciones de colores.</p>
+    </div>
+    <div class="span4">
+      <h3>Aprende m&aacute;s</h3>
+      <img style="float: right; height: 36px;" src="assets/img/less-logo-large.png" alt="LESS CSS">
+      <p>Visita la p&aacute;gina oficial <a href="http://lesscss.org">http://lesscss.org</a> para saber m&aacute;s</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span4">
+      <h3><a href="#variables">Variables</a></h3>
+      <p>Manejar colores y valores de pixel en CSS puede ser un poco doloroso, normalmente es un copia-pega completo. Pero sin LESS  -  asigna colores o valores de pixel como variables ni cambiarlas.</p>
+    </div>
+    <div class="span4">
+      <h3><a href="#mixins">Mezclas</a></h3>
+      <p>Aquellas declaraciones de border-radius triples que necesitas para hacer un CSS normal. Ahora est&aacute;n listas con la ayuda de mezclas, fragmentos de c&oacute;digo que puedes reutilizar en cualquier lugar.</p>
+    </div>
+    <div class="span4">
+      <h3>Operaciones</h3>
+      <p>Haz tu grid importante, y m&aacute;s super flexible haciendo las matem&aacute;ticas al vuelo con operaciones. Multiplica, divide, suma y resta a tu manera con CSS.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- VARIABLES
+================================================== -->
+<section id="variables">
+  <div class="page-header">
+    <h1>Variables Boostrap  <small>Variables LESS, sus valores y gu&iacute;as de uso</small></h1>
+  </div>
+
+  <div class="row">
+    <div class="span6">
+      <h3>Hiperv&iacute;nculos</h3>
+      <table class="table table-bordered table-striped">
+        <tbody>
+          <tr>
+            <td class="span2"><code>@linkColor</code></td>
+            <td>#08c</td>
+            <td>Color de texto de enlace por defecto</td>
+            <td class="swatch-col"><span class="swatch" style="background-color: #08c;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@linkColorHover</code></td>
+            <td><code>darken(@linkColor, 15%)</code></td>
+            <td>Color de texto de enlace por defecto en Hover</td>
+            <td><span class="swatch" style="background-color: #005580;"></span></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Systema de grid</h3>
+      <table class="table table-bordered table-striped">
+        <tbody>
+          <tr>
+            <td class="span2"><code>@gridColumns</code></td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td><code>@gridColumnWidth</code></td>
+            <td>60px</td>
+          </tr>
+          <tr>
+            <td><code>@gridGutterWidth</code></td>
+            <td>20px</td>
+          </tr>
+          <tr>
+            <td><code>@fluidGridColumnWidth</code></td>
+            <td>6.382978723%</td>
+          </tr>
+          <tr>
+            <td><code>@fluidGridGutterWidth</code></td>
+            <td>2.127659574%</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Tipograf&iacute;a</h3>
+      <table class="table table-bordered table-striped">
+        <tbody>
+          <tr>
+            <td class="span2"><code>@baseFontSize</code></td>
+            <td>13px</td>
+          </tr>
+          <tr>
+            <td><code>@baseFontFamily</code></td>
+            <td><code>"Helvetica Neue", Helvetica, Arial, sans-serif</code></td>
+          </tr>
+          <tr>
+            <td><code>@baseLineHeight</code></td>
+            <td>18px</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="span6">
+      <h3>Colores de escala de grises</h3>
+      <table class="table table-bordered table-striped">
+        <tbody>
+          <tr>
+            <td class="span2"><code>@black</code></td>
+            <td>#000</td>
+            <td class="swatch-col"><span class="swatch" style="background-color: #000;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@grayDarker</code></td>
+            <td>#222</td>
+            <td><span class="swatch" style="background-color: #222;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@grayDark</code></td>
+            <td>#333</td>
+            <td><span class="swatch" style="background-color: #333;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@gray</code></td>
+            <td>#555</td>
+            <td><span class="swatch" style="background-color: #555;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@grayLight</code></td>
+            <td>#999</td>
+            <td><span class="swatch" style="background-color: #999;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@grayLighter</code></td>
+            <td>#eee</td>
+            <td><span class="swatch" style="background-color: #eee;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@white</code></td>
+            <td>#fff</td>
+            <td><span class="swatch swatch-bordered" style="background-color: #fff;"></span></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Colores vivos</h3>
+      <table class="table table-bordered table-striped">
+        <tbody>
+          <tr>
+            <td class="span2"><code>@blue</code></td>
+            <td>#049cdb</td>
+            <td class="swatch-col"><span class="swatch" style="background-color: #049cdb;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@green</code></td>
+            <td>#46a546</td>
+            <td><span class="swatch" style="background-color: #46a546;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@red</code></td>
+            <td>#9d261d</td>
+            <td><span class="swatch" style="background-color: #9d261d;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@yellow</code></td>
+            <td>#ffc40d</td>
+            <td><span class="swatch" style="background-color: #ffc40d;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@orange</code></td>
+            <td>#f89406</td>
+            <td><span class="swatch" style="background-color: #f89406;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@pink</code></td>
+            <td>#c3325f</td>
+            <td><span class="swatch" style="background-color: #c3325f;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@purple</code></td>
+            <td>#7a43b6</td>
+            <td><span class="swatch" style="background-color: #7a43b6;"></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div> <!-- /row -->
+
+  <h3>Componentes</h3>
+  <div class="row">
+    <div class="span6">
+      <h4>Botones</h4>
+      <table class="table table-bordered table-striped">
+        <tbody>
+          <tr>
+            <td class="span3"><code>@primaryButtonBackground</code></td>
+            <td><code>@linkColor</code></td>
+            <td class="swatch-col"><span class="swatch" style="background-color: #08c;"></span></td>
+          </tr>
+        </tbody>
+      </table>
+      <h4>Formularios</h4>
+      <table class="table table-bordered table-striped">
+        <tbody>
+          <tr>
+            <td class="span3"><code>@placeholderText</code></td>
+            <td><code>@grayLight</code></td>
+            <td class="swatch-col"><span class="swatch" style="background-color: #999;"></span></td>
+          </tr>
+        </tbody>
+      </table>
+      <h4>Navbar</h4>
+      <table class="table table-bordered table-striped">
+        <tbody>
+          <tr>
+            <td class="span3"><code>@navbarHeight</code></td>
+            <td>40px</td>
+            <td class="swatch-col"></td>
+          </tr>
+          <tr>
+            <td><code>@navbarBackground</code></td>
+            <td><code>@grayDarker</code></td>
+            <td><span class="swatch" style="background-color: #222;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@navbarBackgroundHighlight</code></td>
+            <td><code>@grayDark</code></td>
+            <td><span class="swatch" style="background-color: #333;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@navbarText</code></td>
+            <td><code>@grayLight</code></td>
+            <td><span class="swatch" style="background-color: #999;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@navbarLinkColor</code></td>
+            <td><code>@grayLight</code></td>
+            <td><span class="swatch" style="background-color: #999;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@navbarLinkColorHover</code></td>
+            <td><code>@white</code></td>
+            <td><span class="swatch swatch-bordered" style="background-color: #fff;"></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="span6">
+      <h4>Estados de formulario y alertas</h4>
+      <table class="table table-bordered table-striped">
+        <tbody>
+          <tr>
+            <td class="span3"><code>@warningText</code></td>
+            <td>#c09853</td>
+            <td><span class="swatch" style="background-color: #c09853;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@warningBackground</code></td>
+            <td>#f3edd2</td>
+            <td class="swatch-col"><span class="swatch" style="background-color: #f3edd2;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@errorText</code></td>
+            <td>#b94a48</td>
+            <td><span class="swatch" style="background-color: #b94a48;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@errorBackground</code></td>
+            <td>#f2dede</td>
+            <td><span class="swatch" style="background-color: #f2dede;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@successText</code></td>
+            <td>#468847</td>
+            <td><span class="swatch" style="background-color: #468847;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@successBackground</code></td>
+            <td>#dff0d8</td>
+            <td><span class="swatch" style="background-color: #dff0d8;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@infoText</code></td>
+            <td>#3a87ad</td>
+            <td><span class="swatch" style="background-color: #3a87ad;"></span></td>
+          </tr>
+          <tr>
+            <td><code>@infoBackground</code></td>
+            <td>#d9edf7</td>
+            <td><span class="swatch" style="background-color: #d9edf7;"></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div><!-- /row -->
+
+</section>
+
+
+
+<!-- MIXINS
+================================================== -->
+<section id="mixins">
+  <div class="page-header">
+    <h1>Mezclas de Boostrap <small></small></h1>
+  </div>
+  <h2>Sobre las mezclas</h2>
+  <div class="row">
+    <div class="span4">
+      <h3>Mezclas b&aacute;sicas</h3>
+      <p>Una mezcla b&aacute;sica es una parte esencial para el fragmento de CSS. Se escriben al igual que una clase CSS y se puede llamar en cualquier lugar.</p>
+<pre class="prettyprint linenums">
+.element {
+  .clearfix();
+}
+</pre>
+    </div><!-- /span4 -->
+    <div class="span4">
+      <h3>Mezclas param&eacute;tricas</h3>
+      <p>Una mezcla param&eacute;trica es como una mezcla b&aacute;sica pero tambi&eacute;n acepta par&aacute;metros (de ah&iacute; el nombre) con valores por defecto opcionales. </p>
+<pre class="prettyprint linenums">
+.element {
+  .border-radius(4px);
+}
+</pre>
+    </div><!-- /span4 -->
+    <div class="span4">
+      <h3>A&ntilde;ade f&aacute;cilmente el tuyo propio</h3>
+      <p>Casi todas las mezclas de Boostrap se almacenan en mixing.less, un archivo de utilidad .less maravilloso que te permite usar una mezcla en cualquier archivo del conjunto de herramientas (toolkit).</p>
+      <p>As&iacute; que, ves y usa los que ya existen o a&ntilde;ade el tuyo propio si lo necesitas.</p>
+    </div><!-- /span4 -->
+  </div><!-- /row -->
+  <h2>Mezclas incluidas</h2>
+  <h3>Utilidades</h3>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th class="span4">Mezcla</th>
+        <th>Par&aacute;metros</th>
+        <th>Uso</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>.clearfix()</code></td>
+        <td><em class="muted">none</em></td>
+        <td>A&ntilde;ade cualquier pariente para quitar los floats de adentro</td>
+      </tr>
+      <tr>
+        <td><code>.tab-focus()</code></td>
+        <td><em class="muted">none</em></td>
+        <td>Aplica el estilo Webkit focus  y redondea el outline de Firefox</td>
+      </tr>
+      <tr>
+        <td><code>.center-block()</code></td>
+        <td><em class="muted">none</em></td>
+        <td>Auto-centra un elemento de bloque usando  <code>margin: auto</code></td>
+      </tr>
+      <tr>
+        <td><code>.ie7-inline-block()</code></td>
+        <td><em class="muted">none</em></td>
+        <td>Uso normal de la propiedad <code>display: inline-block</code> con soporte para IE7</td>
+      </tr>
+      <tr>
+        <td><code>.size()</code></td>
+        <td><code>@height: 5px, @width: 5px</code></td>
+        <td>Ajusta r&aacute;pidamente la altura y el ancho de una de las l&iacute;neas</td>
+      </tr>
+      <tr>
+        <td><code>.square()</code></td>
+        <td><code>@size: 5px</code></td>
+        <td>Crea en <code>.size()</code> para ajustar el ancho y la altura del mismo valor</td>
+      </tr>
+      <tr>
+        <td><code>.opacity()</code></td>
+        <td><code>@opacity: 100</code></td>
+        <td>Ajusta, en n&uacute;mero enteros, el porcentaje de opacidad (por ejemplo, &#8220;50&#8221; o &#8220;75&#8221;)</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Formularios</h3>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th class="span4">Mezcla</th>
+        <th>Par&aacute;metros</th>
+        <th>Uso</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>.placeholder()</code></td>
+        <td><code>@color: @placeholderText</code></td>
+        <td>Ajusta el color de texto de <code>placeholder</code> para las entradas de texto</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Tipograf&iacute;a</h3>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th class="span4">Mezcla</th>
+        <th>Par&aacute;metros</th>
+        <th>Uso</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>#font > #family > .serif()</code></td>
+        <td><em class="muted">none</em></td>
+        <td>Hace que un elemento utilice la fuente serif</td>
+      </tr>
+      <tr>
+        <td><code>#font > #family > .sans-serif()</code></td>
+        <td><em class="muted">none</em></td>
+        <td>Hace que un elemento utilice la fuente sans-serif</td>
+      </tr>
+      <tr>
+        <td><code>#font > #family > .monospace()</code></td>
+        <td><em class="muted">none</em></td>
+        <td>Hace que un elemento utilice la fuente monospace</td>
+      </tr>
+      <tr>
+        <td><code>#font > .shorthand()</code></td>
+        <td><code>@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight</code></td>
+        <td>Ajusta f&aacute;cilmente el tama&ntilde;o, el ancho y la altura de la l&iacute;nea</td>
+      </tr>
+      <tr>
+        <td><code>#font > .serif()</code></td>
+        <td><code>@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight</code></td>
+        <td>Ajusta la familia de la fuente a serif, y controla el tama&ntilde;o, el ancho y la altura de la l&iacute;nea</td>
+      </tr>
+      <tr>
+        <td><code>#font > .sans-serif()</code></td>
+        <td><code>@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight</code></td>
+        <td>Ajusta la familia de la fuente a sans-serif, y controla el tama&ntilde;o, el ancho y la altura de la l&iacute;nea</td>
+      </tr>
+      <tr>
+        <td><code>#font > .monospace()</code></td>
+        <td><code>@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight</code></td>
+        <td>Ajusta la familia de la fuente a monospace, y controla el tama&ntilde;o, el ancho y la altura de la l&iacute;nea</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Sistema de grid</h3>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th class="span4">Mezcla</th>
+        <th>Par&aacute;metros</th>
+        <th>Uso</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>.container-fixed()</code></td>
+        <td><em class="muted">none</em></td>
+        <td>Crea un contenedor centrado horizontalmente para establecer tu contenido</td>
+      </tr>
+      <tr>
+        <td><code>#grid > .core()</code></td>
+        <td><code>@gridColumnWidth, @gridGutterWidth</code></td>
+        <td>Genera un sistema de pixel de grid (contenedor, fila y columna) con <em>n</em> columnas y <em>x</em> pixeles de ancho</td>
+      </tr>
+      <tr>
+        <td><code>#grid > .fluid()</code></td>
+        <td><code>@fluidGridColumnWidth, @fluidGridGutterWidth</code></td>
+        <td>Genera un sistema de porcentaje de grid con <em>n</em> columnas y <em>x</em> % de ancho</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Propiedades CSS3</h3>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th class="span3">Mezcla</th>
+        <th>Par&aacute;metros</th>
+        <th>Uso</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>.border-radius()</code></td>
+        <td><code>@radius: 5px</code></td>
+        <td>Redondea las esquinas de un elemento. Puede ser un valor individual o cuatro valores separados</td>
+      </tr>
+      <tr>
+        <td><code>.box-shadow()</code></td>
+        <td><code>@shadow: 0 1px 3px rgba(0,0,0,.25)</code></td>
+        <td>A&ntilde;ade una sombra a un elemento</td>
+      </tr>
+      <tr>
+        <td><code>.transition()</code></td>
+        <td><code>@transition</code></td>
+        <td>A&ntilde;ade un efecto de transici&oacute;n CSS3 (por ejemplo, <code>all .2s linear</code>)</td>
+      </tr>
+      <tr>
+        <td><code>.rotate()</code></td>
+        <td><code>@degrees</code></td>
+        <td>Rota un elemento <em>n</em> grados</td>
+      </tr>
+      <tr>
+        <td><code>.scale()</code></td>
+        <td><code>@ratio</code></td>
+        <td>Escala un elemento <em>n</em> veces la medida original</td>
+      </tr>
+      <tr>
+        <td><code>.translate()</code></td>
+        <td><code>@x: 0, @y: 0</code></td>
+        <td>Mueve un elemento en los planos x e y </td>
+      </tr>
+      <tr>
+        <td><code>.background-clip()</code></td>
+        <td><code>@clip</code></td>
+        <td>Corta el fondo de un elemento (útil para <code>border-radius</code>)</td>
+      </tr>
+      <tr>
+        <td><code>.background-size()</code></td>
+        <td><code>@size</code></td>
+        <td>Controla el tama&ntilde;o de las im&aacute;genes de fondo v&iacute;a CSS3</td>
+      </tr>
+      <tr>
+        <td><code>.box-sizing()</code></td>
+        <td><code>@boxmodel</code></td>
+        <td>Cambia el modelo de casilla para un elemento (por ejemplo, <code>border-box</code> para un <code>input</code> de ancho completo)</td>
+      </tr>
+      <tr>
+        <td><code>.user-select()</code></td>
+        <td><code>@select</code></td>
+        <td>Controla la selecci&oacute;n de cursor del texto en una p&aacute;gina</td>
+      </tr>
+      <tr>
+        <td><code>.resizable()</code></td>
+        <td><code>@direction: both</code></td>
+        <td>Hace que se pueda cambiar el tama&ntilde;o de cualquier elemento a la derecha y en la parte inferior</td>
+      </tr>
+      <tr>
+        <td><code>.content-columns()</code></td>
+        <td><code>@columnCount, @columnGap: @gridColumnGutter</code></td>
+        <td>Hace que el contenido de cualquier elemento use columnas CSS3</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Fondos y degradados</h3>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th class="span4">Mezcla</th>
+        <th>Par&aacute;metros</th>
+        <th>Uso</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>#translucent > .background()</code></td>
+        <td><code>@color: @white, @alpha: 1</code></td>
+        <td>Da un elemento un color de fondo transl&uacute;cido</td>
+      </tr>
+      <tr>
+        <td><code>#translucent > .border()</code></td>
+        <td><code>@color: @white, @alpha: 1</code></td>
+        <td>Da un elemento un color de borde transl&uacute;cido</td>
+      </tr>
+      <tr>
+        <td><code>#gradient > .vertical()</code></td>
+        <td><code>@startColor, @endColor</code></td>
+        <td>""Crea un degradado de fondo vertical de navegador cruzado""</td>
+      </tr>
+      <tr>
+        <td><code>#gradient > .horizontal()</code></td>
+        <td><code>@startColor, @endColor</code></td>
+        <td>""Crea un degradado de fondo horizontal de navegador cruzado""</td>
+      </tr>
+      <tr>
+        <td><code>#gradient > .directional()</code></td>
+        <td><code>@startColor, @endColor, @deg</code></td>
+        <td>""Crea un degradado de fondo direccional de navegador cruzado""</td>
+      </tr>
+      <tr>
+        <td><code>#gradient > .vertical-three-colors()</code></td>
+        <td><code>@startColor, @midColor, @colorStop, @endColor</code></td>
+        <td>""Crea un degradado de fondo de tres colores de navegador cruzado""</td>
+      </tr>
+      <tr>
+        <td><code>#gradient > .radial()</code></td>
+        <td><code>@innerColor, @outerColor</code></td>
+        <td>""Crea un degradado de fondo radial de navegador cruzado""</td>
+      </tr>
+      <tr>
+        <td><code>#gradient > .striped()</code></td>
+        <td><code>@color, @angle</code></td>
+        <td>""Crea un degradado de fondo a rayas de navegador cruzado""</td>
+      </tr>
+      <tr>
+        <td><code>#gradientBar()</code></td>
+        <td><code>@primaryColor, @secondaryColor</code></td>
+        <td>""Utilizado para botones que asignan un degradado o un borde un poco m&aacute;s oscuro""</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+
+<!-- COMPILING LESS AND BOOTSTRAP
+================================================== -->
+<section id="compiling">
+  <div class="page-header">
+    <h1>Compilar Boostrap con LESS</h1>
+  </div>
+  <div class="alert alert-info">
+    <strong>Nota:</strong> ""si est&aacute;s enviando una petici&oacute;n  pull a GitHub con CSS modificado, debes recompilar el CSS v&iacute;a cualquiera de estos m&eacute;todos.""
+  </div>
+  <h2>Herramientas para compilar</h2>
+  <div class="row">
+    <div class="span4">
+      <h3>Nodo con makefile</h3>
+      <p>Instala el compilador de l&iacute;nea de comando LESS y uglify-js en global con npm poniendo en funcionamiento el siguiente comando:</p>
+      <pre>$ npm install -g less uglify-js</pre>
+      <p>Una vez instalado, simplemente pon en funcionamiento <code>make</code> desde la ra&iacute;z de tu directorio boostrap y ya estar&aacute; listo.</p>
+      <p>Adem&aacute;s, si tienes <a href="https://github.com/mynyml/watchr">watchr</a> instalado, puedes poner en funcionamiento <code>make watch</code> para hacer que boostrap se rehaga autom&aacute;ticamente cada vez que edites un archivo en el lib de boostrap (no se necesita, solo es un m&eacute;todo de conveniencia).</p>
+    </div><!-- /span4 -->
+    <div class="span4">
+      <h3>L&iacute;nea de comando</h3>
+      <p>Instala la herramienta de línea de comando LESS vía Node y pon en funcionamient el siguiente comando:</p>
+        <pre>$ lessc ./lib/bootstrap.less > bootstrap.css</pre>
+      <p>Aseg&uacute;rate de incluir <code>--compress</code> en ese comando si est&aacute;s intentado guardar algunos bytes!</p>
+    </div><!-- /span4 -->
+    <div class="span4">
+      <h3>Javascript</h3>
+      <p><a href="http://lesscss.org/">Desc&aacute;rgate la &uacute;ltima versi&oacute;n de Less.js</a> e incluye el camino para &eacute;l mismo  (y Boostrap) en el  <code>&lt;head&gt;</code>.</p>
+<pre class="prettyprint">
+&lt;link rel="stylesheet/less" href="/path/to/bootstrap.less"&gt;
+&lt;script src="/path/to/less.js"&gt;&lt;/script&gt;
+</pre>
+      <p>Para recompilar los archivos .less, simplemente gu&aacute;rdalos y recarga tu p&aacute;gina. Less.js los recompila
+y almacena en un almacen local. </p>
+    </div><!-- /span4 -->
+  </div><!-- /row -->
+  <div class="row">
+    <div class="span4">
+      <h3>App de Mac no oficial</h3>
+      <p><a href="http://incident57.com/less/">La aplicaci&oacute;n de Mac no oficial</a> observa directorios de .less y compila el c&oacute;digo de los archivos locales despu&eacute;s de cada copia guardada de un archivo observado .less.</p>
+   $  <p>Si quieres, puedes hacer preferencias flip-flop (toggle) en la aplicaci&oacute;n para una minimizaci&oacute;n y en que directorio los archivos compilados terminar&aacute;n.</p>
+    </div><!-- /span4 -->
+    <div class="span4">
+      <h3>M&aacute;s aplicaciones de Mac</h3>
+      <h4><a href="http://crunchapp.net/" target="_blank">Crunch</a></h4>
+      <p>Crunch es un editor LESS genial y un compilador creado en Adobe Air.</p>
+      <h4><a href="http://incident57.com/codekit/" target="_blank">CodeKit</a></h4>
+      <p>Creado por el mismo tipo que la aplicaci&oacute;n de Mac no oficial, CodeKit es una aplicaci&oacute;n de Mac que compila LESS, SASS, Stylus y CoffeeScript.</p>
+      <h4><a href="http://wearekiss.com/simpless" target="_blank">Simpless</a></h4>
+      <p>Aplicaci&oacute;n de Mac, Linux y PC para arrastrar y dejar archivos LESS de compilaci&oacute;n. Adem&aacute;s, <a href="https://github.com/Paratron/SimpLESS" target="_blank">el c&oacute;digo de fuente est&aacute;n en GitHub</a>.</p>
+    </div><!-- /span4 -->
+  </div><!-- /row -->
+</section>
+
+
+     <!-- Footer
+      ================================================== -->
+      <footer class="footer">
+        <p class="pull-right"><a href="#">ir Arriba</a></p>
+        
+        <p>TRADUCCIÓN</p>
+        <p>Todos estos documentos han sido traducido por el equipo de Animartec.com</p>
+        
+        
+        <p>ORIGINAL</p>
+
+        <p>Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank">@twitter</a> by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
+        <p>Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <p>Icons from <a href="http://glyphicons.com">Glyphicons Free</a>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+      </footer>
+
+    </div><!-- /container -->
+
+
+
+     <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> 
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+   
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/application.js"></script>
+  </body>
+</html>

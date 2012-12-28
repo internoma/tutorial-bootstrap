@@ -1,0 +1,1945 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Components · Twitter Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body data-spy="scroll" data-target=".subnav" data-offset="50">
+
+
+ <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="./index.html">Bootstrap</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active">
+                <a href="./index.html">Inicio</a>
+              </li>
+              <li class="">
+                <a href="./scaffolding.html">Adaptable</a>
+              </li>
+              <li class="">
+                <a href="./base-css.html">Base CSS</a>
+              </li>
+              <li class="">
+                <a href="./components.html">Componentes</a>
+              </li>
+              <li class="">
+                <a href="./javascript.html">Javascript plugins</a>
+              </li>
+              <li class="">
+                <a href="./less.html">Usando LESS</a>
+              </li>
+              <li class="divider-vertical"></li>
+              <li class="">
+                <a href="./download.html">Personalizar</a>
+              </li>
+              <li class="">
+                <a href="./examples.html">Ejemplos</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+
+<!-- Masthead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+  <h1>Componentes</h1>
+  <p class="lead">Docenas de componentes reutilizables se crean en Boostrap para proporcionar navegaci&oacute;n, alertas y mucho m&aacute;s..</p>
+  <div class="subnav">
+    <ul class="nav nav-pills">
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Botones <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#buttonGroups">Grupo de botones</a></li>
+          <li><a href="#buttonDropdowns">Botones desplegables</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Navegaci&oacute;n <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#navs">Navegaci&oacute;n, Tabs o Pesta&ntilde;as (tabs) y Pastillas (pills)</a></li>
+          <li><a href="#navbar">Barra de Navegaci&oacute;n</a></li>
+          <li><a href="#breadcrumbs">Links de seguimiento</a></li>
+          <li><a href="#pagination">Paginaci&oacute;n</a></li>
+        </ul>
+      </li>
+      <li><a href="#labels">Etiquetas</a></li>
+      <li><a href="#badges">Emblemas</a></li>
+      <li><a href="#typography">Tipograf&iacute;as</a></li>
+      <li><a href="#thumbnails">Miniaturas</a></li>
+      <li><a href="#alerts">Alertas</a></li>
+      <li><a href="#progress">Barras de progreso</a></li>
+      <li><a href="#misc">Otros</a></li>
+    </ul>
+  </div>
+</header>
+
+
+
+<!-- Button Groups
+================================================== -->
+<section id="buttonGroups">
+  <div class="page-header">
+    <h1>Grupo de Botones <small> Une botones para una funcionalidad m&aacute;s parecida a una barra de herramientas</small></h1>
+  </div>
+  <div class="row">
+    <div class="span4">
+      <h3>Grupo de Botones</h3>
+      <p>Utiliza grupos de botones para unir botones m&uacute;ltiples como un componente compuesto. Cr&eacute;alos con una serie de elemento <code>&lt;a&gt;</code> o <code>&lt;button&gt;</code>.</p>
+      <h3>Buenas Pr&aacute;cticas</h3>
+      <p>Recomendamos las siguientes pautas para el uso de grupos de botones y barras de herramientas:</p>
+      <ul>
+        <li>Siempre utiliza el mismo elemento en un grupo individual de botones, <code>&lt;a&gt;</code> o <code>&lt;button&gt;</code>.</li>
+        <li>No mezcles botones de diferente color.</li>
+        <li>Utiliza iconos adem&aacute;s del o en lugar del texto,  pero aseg&uacute;rate de incluir el texto de título y alt donde creas apropiado.</li>
+      </ul>
+      <p><span class="label label-info">Relaci&oacute;n</span> Los grupos de botones con men&uacute;s desplegables (ver abajo) deber&iacute;an llamarse de manera separada y siempre incluir una s&iacute;mbolo de intercalaci&oacute;n desplegable para indicar un comportamiento deseado. (revisar)</p>
+    </div>
+    <div class="span4">
+      <h3>Ejemplo por defecto</h3>
+      <p>Aqu&iacute; tienes como se ve el HTML para un grupo de botones est&aacute;ndar creado con la etiqueta button:</p>
+      <div class="">
+        <div class="btn-group" style="margin: 9px 0;">
+          <button class="btn">Left</button>
+          <button class="btn">Middle</button>
+          <button class="btn">Right</button>
+        </div>
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="btn-group"&gt;
+  &lt;button class="btn"&gt;1&lt;/button&gt;
+  &lt;button class="btn"&gt;2&lt;/button&gt;
+  &lt;button class="btn"&gt;3&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+      <h3>Ejemplo de toolbar</h3>
+      <p>Combina conjuntos de <code>&lt;div class="btn-group"&gt;</code> en un <code>&lt;div class="btn-toolbar"&gt;</code> para componentes m&aacute;s complejos.</p>
+      <div class="btn-toolbar">
+        <div class="btn-group">
+          <button class="btn">1</button>
+          <button class="btn">2</button>
+          <button class="btn">3</button>
+          <button class="btn">4</button>
+        </div>
+        <div class="btn-group">
+          <button class="btn">5</button>
+          <button class="btn">6</button>
+          <button class="btn">7</button>
+        </div>
+        <div class="btn-group">
+          <button class="btn">8</button>
+        </div>
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="btn-toolbar"&gt;
+  &lt;div class="btn-group"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+    <div class="span4">
+      <h3>Checkbox and radio</h3>
+      <p>Los grupos de botones tambi&eacute;n funcionan como radios, donde solo un bot&oacute;n puede estar activo, o las casillas de verificaci&oacute;n, donde cualquier n&uacute;mero de botones pueden estar activos. Mira <a href="./javascript.html#buttons">los documentos Javascript</a> para eso.</p>
+      <p><a class="btn js-btn" href="./javascript.html#buttons">Obtén javascript &raquo;</a></p>
+      <h3>Desplegables en grupos de botones</h3>
+      <p><span class="label label-info">&iexcl;Atenci&oacute;n!</span> Los botones con desplegables deben estar envueltos individualmente en su propio <code>.btn-group</code> dentro de un <code>.btn-toolbar</code> para un rendimiento adecuado..</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Split button dropdowns
+================================================== -->
+<section id="buttonDropdowns">
+  <div class="page-header">
+    <h1>Botones con menus desplegables <small>Creados en grupos de botones para proporcionar men&uacute;s contextuales</small></h1>
+  </div>
+
+  <h2>Botones desplegables</h2>
+  <div class="row">
+    <div class="span4">
+      <h3>Vista previa y ejemplos</h3>
+      <p>Utiliza cualquier bot&oacute;n para provocar un men&uacute; desplegable coloc&aacute;ndolo dentro de un <code>.btn-group</code> y proporcionando el etiquetado de men&uacute; desplegable.</p>
+      <div class="btn-toolbar" style="margin-top: 18px;">
+        <div class="btn-group">
+          <button class="btn dropdown-toggle" data-toggle="dropdown">Acci&oacute;n <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Acci&oacute;n</a></li>
+            <li><a href="#">Otra acci&oacute;n</a></li>
+            <li><a href="#">Algo m&aacute;s aqu&iacute;</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Enlace separado</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Acci&oacute;n <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Acci&oacute;n</a></li>
+            <li><a href="#">Otra acci&oacute;n</a></li>
+            <li><a href="#">Algo m&aacute;s aqu&iacute;</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Enlace separado</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">Peligro <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Acci&oacute;n</a></li>
+            <li><a href="#">Otra acci&oacute;n</a></li>
+            <li><a href="#">Algo m&aacute;s aqu&iacute;</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Enlace separado</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+      </div>
+      <div class="btn-toolbar">
+        <div class="btn-group">
+          <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Advertencia <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Acci&oacute;n</a></li>
+            <li><a href="#">Otra acci&oacute;n</a></li>
+            <li><a href="#">Algo m&aacute;s aqu&iacute;</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Enlace separado</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">&Eacute;xito <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Acci&oacute;n</a></li>
+            <li><a href="#">Otra acci&oacute;n</a></li>
+            <li><a href="#">Algo m&aacute;s aqu&iacute;</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Enlace separado</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">Infomaci&oacute;n <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Acci&oacute;n</a></li>
+            <li><a href="#">Otra acci&oacute;n</a></li>
+            <li><a href="#">Algo m&aacute;s aqu&iacute;</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Enlace separado</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">Inverso <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Acci&oacute;n</a></li>
+            <li><a href="#">Otra acci&oacute;n</a></li>
+            <li><a href="#">Algo m&aacute;s aqu&iacute;</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Enlace separado</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+      </div><!-- /btn-toolbar -->
+    </div>
+    <div class="span8">
+      <h3>Ejemplo de etiquetado</h3>
+      <p>Similar a un grupo de botones, nuestro etiquetado utiliza un etiquetado de botones regulares, pero con la suma de otros &uacute;tiles para refinar el estilo y soportar el plugin de jQUery del desplegable de Boostrap.</p>
+<pre class="prettyprint linenums">
+&lt;div class="btn-group"&gt;
+  &lt;a class="btn dropdown-toggle" data-toggle="dropdown" href="#"&gt;
+    Action
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;!-- dropdown menu links --&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span4">
+      <h3>Funciona con todos los tama&ntilde;os de bot&oacute;n</h3>
+      <p>Los botones desplegables funcionan con cualquier tama&ntilde;o. Tu tama&ntilde;o de botones <code>.btn-large</code>, <code>.btn-small</code>, or <code>.btn-mini</code>.</p>
+      <div class="btn-toolbar" style="margin-top: 18px;">
+        <div class="btn-group">
+          <button class="btn btn-large dropdown-toggle" data-toggle="dropdown">Bot&oacute;n grande <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Acci&oacute;n</a></li>
+            <li><a href="#">Otra acci&oacute;n</a></li>
+            <li><a href="#">Algo m&aacute;s aqu&iacute;</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Enlace separado</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button class="btn btn-small dropdown-toggle" data-toggle="dropdown">Bot&oacute;n peque&ntilde;o	 <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Acci&oacute;n</a></li>
+            <li><a href="#">Otra acci&oacute;n</a></li>
+            <li><a href="#">Algo m&aacute;s aqu&iacute;</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Enlace separado</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown">Mini bot&oacute;n <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Acci&oacute;n</a></li>
+            <li><a href="#">Otra acci&oacute;n</a></li>
+            <li><a href="#">Algo m&aacute;s aqu&iacute;</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Enlace separado</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+      </div><!-- /btn-toolbar -->
+    </div><!--/span-->
+    <div class="span4">
+      <h3>Requiere javascript</h3>
+      <p>Los botones desplegables requieren el <a href="./javascript.html#dropdowns">plugin de desplegable de Boostrap</a> para funcionar.</p>
+      <p>En algunos casos&mdash;como en m&oacute;viles&mdash;los men&uacute;s desplegables se agrandar&aacute;n fuera del viewport. Necesitas solucionar el alineamiento manualmente o personalizar javascript. </p>
+    </div><!--/span-->
+  </div><!--/row-->
+  <br>
+
+  <h2>Botones desplegables con separaci&oacute;n</h2>
+  <div class="row">
+    <div class="span4">
+      <h3>Vista previa y ejemplos</h3>
+      <p>Construyendo en los estilos y los etiquetados de los grupos de botones, podemos crear f&aacute;cilmente botones con separaci&oacute;n. Los botones con separaci&oacute;n tienen una acci&oacute;n est&aacute;ndar a la izquierda y un flip-flop desplegable a la derecha con enlaces contextuales. </p>
+      <div class="btn-toolbar" style="margin-top: 18px;">
+        <div class="btn-group">
+          <button class="btn">Acci&oacute;n</button>
+          <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Acci&oacute;n</a></li>
+            <li><a href="#">Otra acci&oacute;n</a></li>
+            <li><a href="#">Algo m&aacute;s aqu&iacute;</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Enlace separado</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button class="btn btn-primary">Acci&oacute;n</button>
+          <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Otra acci&oacute;n</a></li>
+            <li><a href="#">Algo m&aacute;s aqu&iacute;</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Enlace separado</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button class="btn btn-danger">Peligro</button>
+          <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Acci&oacute;n</a></li>
+            <li><a href="#">Otra acci&oacute;n</a></li>
+            <li><a href="#">Algo m&aacute;s aqu&iacute;</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Enlace separado</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+      </div>
+      <div class="btn-toolbar">
+        <div class="btn-group">
+          <button class="btn btn-warning">Advertencia</button>
+          <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Acci&oacute;n</a></li>
+            <li><a href="#">Otra acci&oacute;n</a></li>
+            <li><a href="#">Algo m&aacute;s aqu&iacute;</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Enlace separado</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button class="btn btn-success">&Eacute;xito</button>
+          <button class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Acci&oacute;n</a></li>
+            <li><a href="#">Otra acci&oacute;n</a></li>
+            <li><a href="#">Algo m&aacute;s aqu&iacute;</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Enlace separado</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button class="btn btn-info">Informaci&oacute;n</button>
+          <button class="btn btn-info dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Acci&oacute;n</a></li>
+            <li><a href="#">Otra acci&oacute;n</a></li>
+            <li><a href="#">Algo m&aacute;s aqu&iacute;</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Enlace separado</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+      </div>
+      <div class="btn-toolbar">
+        <div class="btn-group">
+          <button class="btn btn-inverse">Inverso</button>
+          <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Acci&oacute;n</a></li>
+            <li><a href="#">Otra acci&oacute;n</a></li>
+            <li><a href="#">Algo m&aacute;s aqu&iacute;</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Enlace separado</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+      </div><!-- /btn-toolbar -->
+      <h3>Tamaños</h3>
+      <p>Utiliza la clase de bot&oacute;n extra <code>.btn-mini</code>, <code>.btn-small</code>, o <code>.btn-large</code> para elegir un tamaño.</p>
+      <div class="btn-toolbar">
+        <div class="btn-group">
+          <button class="btn btn-large">Acci&oacute;n grande</button>
+          <button class="btn btn-large dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Acci&oacute;n</a></li>
+            <li><a href="#">Otra acci&oacute;n</a></li>
+            <li><a href="#">Algo m&aacute;s aqu&iacute;</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Enlace separado</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+      </div><!-- /btn-toolbar -->
+      <div class="btn-toolbar">
+        <div class="btn-group">
+          <button class="btn btn-small">Acci&oacute;n peque&ntilde;a</button>
+          <button class="btn btn-small dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Acci&oacute;n</a></li>
+            <li><a href="#">Otra acci&oacute;n</a></li>
+            <li><a href="#">Algo m&aacute;s aqu&iacute;</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Enlace separado</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+      </div><!-- /btn-toolbar -->
+      <div class="btn-toolbar">
+        <div class="btn-group">
+          <button class="btn btn-mini">Mini acción</button>
+          <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Acci&oacute;n</a></li>
+            <li><a href="#">Otra acci&oacute;n</a></li>
+            <li><a href="#">Algo m&aacute;s aqu&iacute;</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Enlace separado</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+      </div><!-- /btn-toolbar -->
+<pre class="prettyprint linenums">
+&lt;div class="btn-group"&gt;
+  ...
+  &lt;ul class="dropdown-menu pull-right"&gt;
+    &lt;!-- dropdown menu links --&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+    <div class="span8">
+      <h3>Ejemplo de etiquetado</h3>
+      <p>Nos expandimos en un bot&oacute;n desplegable normal para proporcionar una segunda acci&oacute;n de bot&oacute;n que funciona como un men&uacute; desplegable separado. </p>
+<pre class="prettyprint linenums">
+&lt;div class="btn-group"&gt;
+  &lt;button class="btn"&gt;Action&lt;/button&gt;
+  &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;!-- dropdown menu links --&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+      <h3>Dropup menus</h3>
+      <p>Dropdown menus can also be toggled from the bottom up by adding a single class to the immediate parent of <code>.dropdown-menu</code>. It will flip the direction of the <code>.caret</code> and reposition the menu itself to move from the bottom up instead of top down.</p>
+      <div class="btn-toolbar" style="margin-top: 9px;">
+        <div class="btn-group dropup">
+          <button class="btn">Dropup</button>
+          <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group dropup">
+          <button class="btn primary">Right dropup</button>
+          <button class="btn primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+          <ul class="dropdown-menu pull-right">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="btn-group dropup"&gt;
+  &lt;button class="btn"&gt;Dropup&lt;/button&gt;
+  &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;!-- dropdown menu links --&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Nav, Tabs, & Pills
+================================================== -->
+<section id="navs">
+  <div class="page-header">
+    <h1>Nav, tabs, and pills <small>Altamente personalizables con la navegaci&oacute;n de lista de estilo</small></h1>
+  </div>
+
+  <h2>Predeterminados sutiles <small>Etiquetas iguales, clases diferentes.</small></h2>
+  <div class="row">
+    <div class="span4">
+      <h3>Clase base principal</h3>
+      <p>Todos los componentes nav&mdash;tabs, pills, and lists&mdash;<strong>comparten el mismo etiquetado base y estilos</strong> a trav&eacute;s de la clase <code>.nav</code>.</p>
+      <h3>Cuando usarlo </h3>
+      <p>Los Tabs y pills son ideales para las secciones de contenido o de navegaci&oacute;n entre p&aacute;ginas de contenido relacionado.</p>
+      <h3>Alineación del componente</h3>
+      <p>Para alinear los enlaces nav, utiliza la utilized de las clases <code>.pull-left</code> o <code>.pull-right</code> utility classes. Ambas clases a&ntilde;adir&aacute;n un float CSS en la dirección especificada.</p>
+    </div>
+    <div class="span4">
+      <h3>Tabs b&aacute;sicos</h3>
+      <p>Toma un <code>&lt;ul&gt;</code> normal de enlaces y a&ntilde;ade <code>.nav-tabs</code>:</p>
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Perfil</a></li>
+        <li><a href="#">Mensajes</a></li>
+      </ul>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-tabs"&gt;
+  &lt;li class="active"&gt;
+    &lt;a href="#"&gt;Home&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+    </div>
+    <div class="span4">
+      <h3>Pills b&aacute;sicos</h3>
+      <p>Toma el mismo HTML, pero usa <code>.nav-pills</code> en su lugar:</p>
+      <ul class="nav nav-pills">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Perfil</a></li>
+        <li><a href="#">Mensaje</a></li>
+      </ul>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-pills"&gt;
+  &lt;li class="active"&gt;
+    &lt;a href="#"&gt;Home&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+    </div>
+  </div>
+
+  <h2>Apilables (Stackable) <small>Haz tabs o pills verticales</small></h2>
+  <div class="row">
+    <div class="span4">
+      <h3>Como apilarlos</h3>
+      <p>Como taba y pills son horizontales por defecto, tan s&oacute;lo a&ntilde;ade una segunda clase, <code>.nav-stacked</code>, para hacerlos apilables en vertical.</p>
+    </div>
+    <div class="span4">
+      <h3>Tabs apilados</h3>
+      <ul class="nav nav-tabs nav-stacked">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Perfil</a></li>
+        <li><a href="#">Mensajes</a></li>
+      </ul>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-tabs nav-stacked"&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+    </div>
+    <div class="span4">
+      <h3>Pills apilados</h3>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Perfil</a></li>
+        <li><a href="#">Mensaje</a></li>
+      </ul>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-pills nav-stacked"&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+    </div>
+  </div>
+
+  <h2>Desplegables <small>Para componentes nav avanzados</small></h2>
+  <div class="row">
+    <div class="span4">
+      <h3>Men&uacute;s ricos hechos f&aacute;cilmente</h3>
+      <p>Los men&uacute;s desplegables con tabs y pills de Boostrap son s&uacute;per f&aacute;ciles y requieren un poco de HTML extra y un plugin de jQuery ligero.</p>
+      <p>Contin&uacute;a en la p&aacute;gina dee Javascript para leer los documentos sobre <a href="./javascript.html#tabs">iniciar desplegables</a> en Boostrap.</p>
+    </div>
+    <div class="span4">
+      <h3>Tabs con desplegables</h3>
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Ayuda</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Desplegable <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Acci&oacute;n</a></li>
+            <li><a href="#">Otra acci&oacute;n</a></li>
+            <li><a href="#">Aqu&iacute; otra cosa</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Enlace separado</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Plegable <b class="caret bottom-up"></b></a>
+          <ul class="dropdown-menu bottom-up pull-right">
+            <li><a href="#">Acci&oacute;n</a></li>
+            <li><a href="#">Otra acci&oacute;n</a></li>
+            <li><a href="#">Aqu&iacute; otra cosa</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Enlace separado</a></li>
+          </ul>
+        </li>
+      </ul>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-tabs"&gt;
+  &lt;li class="dropdown"&gt;
+    &lt;a class="dropdown-toggle"
+       data-toggle="dropdown"
+       href="#"&gt;
+        Dropdown
+        &lt;b class="caret"&gt;&lt;/b&gt;
+      &lt;/a&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      &lt;!-- links --&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+    </div>
+    <div class="span4">
+      <h3>Pills con desplegables</h3>
+      <ul class="nav nav-pills">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Ayuda</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Desplegable <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Acci&oacute;n</a></li>
+            <li><a href="#">Otra acción</a></li>
+            <li><a href="#">Aquí otra cosa</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Enlace separado</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Plegable <b class="caret bottom-up"></b></a>
+          <ul class="dropdown-menu bottom-up pull-right">
+            <li><a href="#">Acci&oacute;n</a></li>
+            <li><a href="#">Otra acción</a></li>
+            <li><a href="#">Aquí otra cosa</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Enlace separado</a></li>
+          </ul>
+        </li>
+      </ul>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-pills"&gt;
+  &lt;li class="dropdown"&gt;
+    &lt;a class="dropdown-toggle"
+       data-toggle="dropdown"
+       href="#"&gt;
+        Dropdown
+        &lt;b class="caret"&gt;&lt;/b&gt;
+      &lt;/a&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      &lt;!-- links --&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+    </div>
+  </div>
+
+  <h2>Nav listadas (nav list) <small>Crear simples navs apiladas, ideales para el men&uacute; de opciones</small></h2>
+  <div class="row">
+    <div class="span4">
+      <h3>Navegaci&oacute;n con estilo de aplicaci&oacute;n</h3>
+      <p>Las navs listadas (nav list) proporcionan una manera simple y f&aacute;cil de crear grupos de enlaces nav con encabezamietnos opcionales. Se utilizan mejor en men&uacute;s de opciones como el Finder en OS X.</p>
+      <p>Estructuralmente, se construyen de la misma forma y estilo que los nav como los tabs y los pills, as&iacute; que el uso y personalizaci&oacute;n son muy claros.</p>
+      <hr>
+      <h4>Con iconos</h4>
+      <p>Las nav listadas (nav list) tambi&eacute;n son f&aacute;ciles de equipar con iconos. A&ntilde;ade la etiqueta adecuada <code>&lt;i&gt;</code> con clase y ya est&aacute; listo.</p>
+      <h4>Divisores horizontales</h4>
+      <p>Añade un divisor horizontal creando un elemento de lista vacio con la clase <code>.divider</code>, as&iacute;:</p>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-list"&gt;
+  ...
+  &lt;li class="divider"&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+    </div>
+    <div class="span4">
+      <h3>Ejemplo de nav listada (nav list)</h3>
+      <p>Toma una lista de enlaces y añade <code>class="nav nav-list"</code>:</p>
+      <div class="well" style="padding: 8px 0;">
+        <ul class="nav nav-list">
+          <li class="nav-header">Encabezado de lista</li>
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Librer&iacute;a</a></li>
+          <li><a href="#">Aplicaciones</a></li>
+          <li class="nav-header">Otro encabezado de lista</li>
+          <li><a href="#">Perfil</a></li>
+          <li><a href="#">Ajustes</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Ayuda</a></li>
+        </ul>
+      </div> <!-- /well -->
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-list"&gt;
+  &lt;li class="nav-header"&gt;
+    List header
+  &lt;/li&gt;
+  &lt;li class="active"&gt;
+    &lt;a href="#"&gt;Home&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="#"&gt;Library&lt;/a&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+    </div>
+    <div class="span4">
+      <h3>Ejemplo con iconos</h3>
+      <p>Mismo ejemplo pero con etiquetas <code>&lt;i&gt;</code> para iconos.</p>
+      <div class="well" style="padding: 8px 0;">
+        <ul class="nav nav-list">
+          <li class="nav-header">Encabezado de lista</li>
+          <li class="active"><a href="#"><i class="icon-white icon-home"></i> Home</a></li>
+          <li><a href="#"><i class="icon-book"></i> Librer&iacute;a</a></li>
+          <li><a href="#"><i class="icon-pencil"></i> Aplicaciones</a></li>
+          <li class="nav-header">Otro encabezado de lista</li>
+          <li><a href="#"><i class="icon-user"></i> Perfil</a></li>
+          <li><a href="#"><i class="icon-cog"></i> Ajustes</a></li>
+          <li class="divider"></li>
+          <li><a href="#"><i class="icon-flag"></i> Ayuda</a></li>
+        </ul>
+      </div> <!-- /well -->
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-list"&gt;
+  ...
+  &lt;li&gt;
+    &lt;a href="#"&gt;
+      &lt;i class="icon-book"&gt;&lt;/i&gt;
+      Library
+    &lt;/a&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+    </div>
+  </div>
+
+
+  <h2>Tabbable nav <small>Trae tabuladores a la vida v&iacute;a javascript</small></h2>
+  <div class="row">
+    <div class="span4">
+      <h3>Qu&eacute; est&aacute; incluido</h3>
+      <p>Trae tus tabuladores a la vida con un plugin simple para mover entre contenido v&iacute;a tabuladores. Boostrap integra tabuladores tabulables  en cuatro estilos: superio (defecto), derecha, inferior e izquierda.</p>
+      <p>El cambio entre ellos es f&aacute;cil y s&oacute;lo requiere un peque&ntilde;o cambio de etiquetas.</p>
+    </div>
+    <div class="span4">
+      <h3>Ejemplo tabulable</h3>
+      <p>Para hacer tabs tabulables, envuelve el <code>.nav-tabs</code> en otro div con clase <code>.tabbable</code>.</p>
+      <div class="tabbable" style="margin-bottom: 9px;">
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#1" data-toggle="tab">Secci&oacute;n 1</a></li>
+          <li><a href="#2" data-toggle="tab">Secci&oacute;n 2</a></li>
+          <li><a href="#3" data-toggle="tab">Secci&oacute;n 3</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="1">
+            <p>Estoy en la secci&oacute;n 1.</p>
+          </div>
+          <div class="tab-pane" id="2">
+            <p>Hola, estoy en la secci&oacute;n 2.</p>
+          </div>
+          <div class="tab-pane" id="3">
+            <p>Esto es la secci&oacute;n 3.</p>
+          </div>
+        </div>
+      </div> <!-- /tabbable -->
+    </div>
+    <div class="span4">
+      <h3>Plugin Jquery personalizable</h3>
+      <p>Todos los taba tabulables están desarrollados pro nuestro ligero plugin jQuery. Lee m&aacute;s sobre como traer taba tabulables a la vida en la p&aacute;gina de documentos de javascript.</p>
+      <p><a class="btn" href="./javascript.html#tabs">Obt&eacute;n el javascript &rarr;</a></p>
+    </div>
+  </div>
+
+  <h3>Etiquetado directo</h3>
+  <p>Utilizar los tabs tabulables requiere envolver un div, y aplicar paneles de contenido tabulables.</p>
+<pre class="prettyprint linenums">
+&lt;div class="tabbable"&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    &lt;li class="active"&gt;&lt;a href="#1" data-toggle="tab"&gt;Section 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#2" data-toggle="tab"&gt;Section 2&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class="tab-content"&gt;
+    &lt;div class="tab-pane active" id="1"&gt;
+      &lt;p&gt;I'm in Section 1.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="2"&gt;
+      &lt;p&gt;Howdy, I'm in Section 2.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+  <h3>Tabulables en cualquier direcci&oacute;n</h3>
+  <div class="row">
+    <div class="span4">
+      <h4>Tabs en la parte inferior</h4>
+      <p>Mueve el orden de HTML y a&ntilde;ade una clase para poner tabuladores en la parte inferior.</p>
+      <div class="tabbable tabs-below">
+        <div class="tab-content">
+          <div class="tab-pane active" id="A">
+            <p>Estoy en la secci&oacute;n A.</p>
+          </div>
+          <div class="tab-pane" id="B">
+            <p>Hola, estoy en la secci&oacute;n B.</p>
+          </div>
+          <div class="tab-pane" id="C">
+            <p>Esta es la secci&oacute;n C.</p>
+          </div>
+        </div>
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#A" data-toggle="tab">Secci&oacute;n 1</a></li>
+          <li><a href="#B" data-toggle="tab">Secci&oacute;n 2</a></li>
+          <li><a href="#C" data-toggle="tab">Secci&oacute;n 3</a></li>
+        </ul>
+      </div> <!-- /tabbable -->
+<pre class="prettyprint linenums" style="margin-top: 11px;">
+&lt;div class="tabbable tabs-below"&gt;
+  &lt;div class="tab-content"&gt;
+    ...
+  &lt;/div&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+    <div class="span4">
+      <h4>Tabs en la izquierda</h4>
+      <p>Intercambia la clase para poner tabs a la izquierda.</p>
+      <div class="tabbable tabs-left">
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#lA" data-toggle="tab">Secci&oacute;n 1</a></li>
+          <li><a href="#lB" data-toggle="tab">Secci&oacute;n 2</a></li>
+          <li><a href="#lC" data-toggle="tab">Secci&oacute;n 3</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="lA">
+            <p>Estoy en la secci&oacute;n A.</p>
+          </div>
+          <div class="tab-pane" id="lB">
+            <p>Hola, estoy en la secci&oacute;n B.</p>
+          </div>
+          <div class="tab-pane" id="lC">
+            <p>Esta es la secci&oacute;n C</p>
+          </div>
+        </div>
+      </div> <!-- /tabbable -->
+<pre class="prettyprint linenums">
+&lt;div class="tabbable tabs-left"&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    ...
+  &lt;/ul&gt;
+  &lt;div class="tab-content"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+    <div class="span4">
+      <h4>Tabs en la derecha</h4>
+      <p>Intercambia la clase para poner tabs a la derecha.</p>
+      <div class="tabbable tabs-right">
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#rA" data-toggle="tab">Secci&oacute;n 1</a></li>
+          <li><a href="#rB" data-toggle="tab">Secci&oacute;n 2</a></li>
+          <li><a href="#rC" data-toggle="tab">Secci&oacute;n 3</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="rA">
+            <p>Estoy en la secci&oacute;n A.</p>
+          </div>
+          <div class="tab-pane" id="rB">
+            <p>Hola, estoy en la secci&oacute;n B.</p>
+          </div>
+          <div class="tab-pane" id="rC">
+            <p>Esta es la secci&oacute;n C</p>
+          </div>
+        </div>
+      </div> <!-- /tabbable -->
+<pre class="prettyprint linenums">
+&lt;div class="tabbable tabs-right"&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    ...
+  &lt;/ul&gt;
+  &lt;div class="tab-content"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+  </div>
+
+</section>
+
+
+
+<!-- Navbar
+================================================== -->
+<section id="navbar">
+  <div class="page-header">
+    <h1>Navbar</h1>
+  </div>
+  <h2>Ejemplo de navbar est&aacute;tica</h2>
+  <p>Un ejemplo de una navbar est&aacute;tica (no fijada en la parte superior) con un nombre de proyecto, navegaci&oacute;n y un formulario de b&uacute;squeda..</p>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="#">Nombre proyecto</a>
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Enlace1</a></li>
+            <li><a href="#">Enlace2</a></li>
+            <li><a href="#">Enlace3</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Desplegable <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Acci&oacute;n</a></li>
+                <li><a href="#">otra acci&oacute;n</a></li>
+                <li><a href="#">Algo m&aacute;s aqu&iacute;</a></li>
+                <li class="divider"></li>
+                <li class="nav-header">Nav header</li>
+                <li><a href="#">Enlace separado</a></li>
+                <li><a href="#">Un enlace separado m&aacute;s</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-search pull-left" action="">
+            <input type="text" class="search-query span2" placeholder="Search">
+          </form>
+          <ul class="nav pull-right">
+            <li><a href="#">Enlace</a></li>
+            <li class="divider-vertical"></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Desplegable <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Acci&oacute;n</a></li>
+                <li><a href="#">Otra acci&oacute;n</a></li>
+                <li><a href="#">Algo m&aacute;s aqu&iacute;</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Enlace separado</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div>
+    </div><!-- /navbar-inner -->
+  </div><!-- /navbar -->
+
+  <div class="row">
+    <div class="span8">
+      <h3>Navbar adaptable</h3>
+      <p>La navbar requiere unos pocos divs para estructurarlo bien para una vista est&aacute;tica o fija</p>
+<pre class="prettyprint linenums">
+&lt;div class="navbar"&gt;
+  &lt;div class="navbar-inner"&gt;
+    &lt;div class="container"&gt;
+      ...
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+      <h3>Navbar fija</h3>
+      <p>Fija la navbar en la parte superior o inferior del viewport(navegador) con una clase adicional en el div exterior , <code>.navbar</code>.</p>
+      <div class="row">
+        <div class="span4">
+<pre class="prettyprint linenums">
+&lt;div class="navbar navbar-fixed-top"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+        </div><!--/span-->
+        <div class="span4">
+<pre class="prettyprint linenums">
+&lt;div class="navbar navbar-fixed-bottom"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+        </div><!--/span-->
+      </div><!--/row-->
+      <p>Cuando pones la navbar, recuerda tener en cuenta el &aacute;rea escondida subyacente. A&ntilde;ade 40px o m&aacute;s de padding al <code>&lt;body&gt;</code>. Aseg&uacute;rate de a&ntilde;adirlo después del core de Boostrap CSS y antes del responsive CSS opcional. </p>
+      <h3>Nombre de marca (brand name)</h3>
+      <p>Un enlace simple para mostrar tu nombre de marca o proyecto, solo requiere de una etiqueta v&iacute;nculo.</p>
+<pre class="prettyprint linenums">
+&lt;a class="brand" href="#"&gt;
+  Nombre proyecto
+&lt;/a&gt;
+</pre>
+      <h3>Formularios en navbar</h3>
+      <p>Para dar estilo y posici&oacute;n adecuadamente un formulario dentro de una navbar, a&ntilde;ade las clases adecuadas como se ve abajo. Para un formulario por defecto, incluye <code>.navbar-form</code> y tanto <code>.pull-left</code> como <code>.pull-right</code> para alinearlo adecuadamente.</p>
+<pre class="prettyprint linenums">
+&lt;form class="navbar-form pull-left"&gt;
+  &lt;input type="text" class="span2"&gt;
+&lt;/form&gt;
+</pre>
+      <p>Para un formulario de b&uacute;squeda m&aacute;s personalizado, a&ntilde;ade la clase <code>.navbar-search</code> para recibir estilos especializados en la navbar.</p>
+<pre class="prettyprint linenums">
+&lt;form class="navbar-search pull-left"&gt;
+  &lt;input type="text" class="search-query" placeholder="Search"&gt;
+&lt;/form&gt;
+</pre>
+      <h3>Optional responsive variation</h3>
+      <p>Dependiendo de la cantidad de contenido en tu barra superior, puede que quieras ejecutar opciones &quot;responsive&quot;. Para hacerlo, envuelve tu contenido nav en un contenedor div, <code>.nav-collapse.collapse</code>, y a&ntilde;ade un bot&oacute;n toggle navbar <code>.btn-navbar</code>.</p>
+<pre class="prettyprint linenums">
+&lt;div class="navbar"&gt;
+  &lt;div class="navbar-inner"&gt;
+    &lt;div class="container"&gt;
+
+      &lt;!-- .btn-navbar is used as the toggle for collapsed navbar content --&gt;
+      &lt;a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;/a&gt;
+
+      &lt;!-- Be sure to leave the brand out there if you want it shown --&gt;
+      &lt;a class="brand" href="#"&gt;Project name&lt;/a&gt;
+
+      &lt;!-- Everything you want hidden at 940px or less, place within here --&gt;
+      &lt;div class="nav-collapse"&gt;
+        &lt;!-- .nav, .navbar-search, .navbar-form, etc --&gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+      <div class="alert alert-info">
+        <strong>¡Atención!</strong> La navbar receptiva requiere un <a href="./javascript.html#collapse">collapse plugin</a> (plugin plegable).
+      </div>
+
+    </div><!-- /.span -->
+    <div class="span4">
+      <h3>Enlaces nav (Nav links)</h3>
+      <p>Los elementos nav son f&aacute;ciles de a&ntilde;adir a trav&eacute;s de listas desordenadas</p>
+<pre class="prettyprint linenums">
+&lt;ul class="nav"&gt;
+  &lt;li class="active"&gt;
+    &lt;a href="#">Home&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+      <p>Puedes a&ntilde;adir divisores f&aacute;cilmente a tus enlaces nav con un elemento de lista (list item) vacío y una simple clase. Solamente a&ntilde;ade esto entre los enlaces::</p>
+<pre class="prettyprint linenums">
+&lt;ul class="nav"&gt;
+  ...
+  &lt;li class="divider-vertical"&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+      <h3>Alineaci&oacute;n de componente</h3>
+      <p>Para alinear una nav, un formulario de b&uacute;squeda o un texto, utiliza la utilidad de las clases <code>.pull-left</code> or <code>.pull-right</code> utility classes. Ambas clases a&ntilde;adir&aacute;n un float CSS en la direcci&oacute;n especificada</p>
+      <h3>A&ntilde;adir men&uacute;s desplegables</h3>
+      <p>A&ntilde;adir desplegables y plegables a la nav es f&aacute;cil, pero requiere el uso de <a href="./javascript.html/#dropdown">nuestro plugin de javascript</a>.</p>
+<pre class="prettyprint linenums">
+&lt;ul class="nav"&gt;
+  &lt;li class="dropdown"&gt;
+    &lt;a href="#"
+          class="dropdown-toggle"
+          data-toggle="dropdown">
+          Account
+          &lt;b class="caret"&gt;&lt;/b&gt;
+    &lt;/a&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      ...
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+      <p><a class="btn" href="./javascript.html#dropdowns">Obtén el javascript &rarr;</a></p>
+      <hr>
+      <h3>Texto en el navbar</h3>
+      <p>Envuelve las cadenas de texto en una etiqueta <code>&lt;p&gt;</code> para un direccionamiento y color adecuados.</p>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+
+</section>
+
+
+
+<!-- Breadcrumbs
+================================================== -->
+<section id="breadcrumbs">
+  <div class="page-header">
+    <h1>Breadcrumbs (Links de seguimiento) <small></small></h1>
+  </div>
+
+  <div class="row">
+    <div class="span6">
+      <h3>Por qu&eacute; usarlos</h3>
+      <p>La navegaci&oacute;n de breadcrumb se utiliza para mostrar a los usuarios donde est&aacute;n dentro de una aplicaci&oacute;n o un sitio, pero no para una navegaci&oacute;n primaria. Mant&eacute;n su uso escaso para ser m&aacute;s efectivo.</p>
+
+      <h3>Ejemplo</h3>
+      <p>"A single example shown as it might be displayed across multiple pages."</p>
+      <ul class="breadcrumb">
+        <li class="active">Home</li>
+      </ul>
+      <ul class="breadcrumb">
+        <li><a href="#">Home</a> <span class="divider">/</span></li>
+        <li class="active">Library</li>
+      </ul>
+      <ul class="breadcrumb">
+        <li><a href="#">Home</a> <span class="divider">/</span></li>
+        <li><a href="#">Library</a> <span class="divider">/</span></li>
+        <li class="active">Data</li>
+      </ul>
+    </div>
+    <div class="span6">
+      <h3>Etiquetado</h3>
+      <p>HTML es tu lista desordenada est&aacute;ndar con enlaces.</p>
+<pre class="prettyprint linenums">
+&lt;ul class="breadcrumb"&gt;
+  &lt;li&gt;
+    &lt;a href="#"&gt;Home&lt;/a&gt; &lt;span class="divider"&gt;/&lt;/span&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="#"&gt;Library&lt;/a&gt; &lt;span class="divider"&gt;/&lt;/span&gt;
+  &lt;/li&gt;
+  &lt;li class="active"&gt;Data&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+    </div>
+  </div>
+
+</section>
+
+
+
+<!-- Pagination
+================================================== -->
+<section id="pagination">
+  <div class="page-header">
+    <h1>Paginaci&oacute;n <small>Dos opciones para paginar a trav&eacute;s de contenido</small></h1>
+  </div>
+
+  <h2>Paginaci&oacute;n de p&aacute;gina con multi-iconos</h2>
+  <div class="row">
+    <div class="span4">
+      <h3>Cuando usarlo</h3>
+      <p>La paginaci&oacute;n con estilo minimalista y ultra simple est&aacute; inspirada por Rdio, ideales para aplicaciones y resultados de b&uacute;squeda. Un gran bloque dif&iacute;cil de que se te escape, f&aacute;cil de poner a escala y que proporciona grandes &aacute;reas de clic.</p>
+      <h3>Enlaces de p&aacute;gina de estado</h3>
+      <p>Los enlaces se personalizan y funcionan en un n&uacute;mero de ocasiones con la clase correcta. <code>.disabled</code> para enlaces no aptos para el clic y <code>.active</code> para la p&aacute;gina actual.</p>
+      <h3>Alienamiento flexible</h3>
+      <p>A&ntilde;ade cualquiera de las dos clases opcionales para cambiar el alineamiento de la paginaci&oacute;n de enlaces: <code>.pagination-centered</code> y <code>.pagination-right</code>.</p>
+    </div>
+    <div class="span4">
+      <h3>Ejemplos</h3>
+      <p>El componente de paginaci&oacute;n por defecto es flexible y funciona en diferentes variaciones.</p>
+      <div class="pagination">
+        <ul>
+          <li class="disabled"><a href="#">&laquo;</a></li>
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">&raquo;</a></li>
+        </ul>
+      </div>
+      <div class="pagination">
+        <ul>
+          <li><a href="#">&laquo;</a></li>
+          <li><a href="#">10</a></li>
+          <li class="active"><a href="#">11</a></li>
+          <li><a href="#">12</a></li>
+          <li><a href="#">&raquo;</a></li>
+        </ul>
+      </div>
+      <div class="pagination">
+        <ul>
+          <li><a href="#">&larr;</a></li>
+          <li class="active"><a href="#">10</a></li>
+          <li class="disabled"><a href="#">...</a></li>
+          <li><a href="#">20</a></li>
+          <li><a href="#">&rarr;</a></li>
+        </ul>
+      </div>
+      <div class="pagination pagination-centered">
+        <ul>
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="span4">
+      <h3>Etiquetado</h3>
+      <p>Envuelto en un <code>&lt;div&gt;</code>, la paginaci&oacute;n es solo un <code>&lt;ul&gt;</code>.</p>
+<pre class="prettyprint linenums">
+&lt;div class="pagination"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Prev&lt;/a&gt;&lt;/li>
+    &lt;li class="active"&gt;
+      &lt;a href="#"&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Next&lt;/a&gt;&lt;/li>
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+  </div><!-- /row -->
+
+  <h2>Pager (Localizador) <small>Para enlaces r&aacute;pidos de anterior y siguiente.</small></h2>
+  <div class="row">
+    <div class="span4">
+      <h3>Sobre pager</h3>
+      <p>El componente pager es un conjunto de enlaces para implementaciones de paginaci&oacute;n simples con un etiquetado ligero e incluso estilos m&aacute;s ligeros. Es ideal para sitios individuales como blogs o revistas.</p>
+      <h4>Estado deshabilitado opcional</h4>
+      <p>Los enlaces pager tambi&eacute;n utilizan la clase general  <code>.disabled</code> desde la paginaci&oacute;n.</p>
+    </div>
+    <div class="span4">
+      <h3>Ejemplo por defecto</h3>
+      <p>Por defecto, pager centra los enlaces.</p>
+      <ul class="pager">
+        <li><a href="#">Anterior</a></li>
+        <li><a href="#">Siguiente</a></li>
+      </ul>
+<pre class="prettyprint linenums">
+&lt;ul class="pager"&gt;
+  &lt;li&gt;
+    &lt;a href="#"&gt;Anterior&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="#"&gt;Siguiente&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+    </div>
+    <div class="span4">
+      <h3>Enlaces alineados</h3>
+      <p>Alternativamente, puedes alinear cada enlace a los lados:</p>
+      <ul class="pager">
+        <li class="previous"><a href="#">&larr; Antiguo</a></li>
+        <li class="next"><a href="#">Nuevo &rarr;</a></li>
+      </ul>
+<pre class="prettyprint linenums">
+&lt;ul class="pager"&gt;
+  &lt;li class="previous"&gt;
+    &lt;a href="#"&gt;&amp;larr; Antiguo&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="next"&gt;
+    &lt;a href="#"&gt;Nuevo &amp;rarr;&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+    </div>
+  </div><!-- /row -->
+</section>
+
+
+
+<!-- Labels
+================================================== -->
+<section id="labels">
+  <div class="page-header">
+    <h1>Etiquetas en l&iacute;nea <small>Etiqueta y anota texto</small></h1>
+  </div>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Etiquetas</th>
+        <th>C&oacute;digo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <span class="label">Por Defecto</span>
+        </td>
+        <td>
+          <code>&lt;span class="label"&gt;Por Defecto&lt;/span&gt;</code>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="label label-success">&Eacute;xito</span>
+        </td>
+        <td>
+          <code>&lt;span class="label label-success"&gt;&Eacute;xito&lt;/span&gt;</code>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="label label-warning">Advertencia</span>
+        </td>
+        <td>
+          <code>&lt;span class="label label-warning"&gt;Advertencia&lt;/span&gt;</code>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="label label-important">Importante</span>
+        </td>
+        <td>
+          <code>&lt;span class="label label-important"&gt;Importante&lt;/span&gt;</code>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="label label-info">Informaci&oacute;n</span>
+        </td>
+        <td>
+          <code>&lt;span class="label label-info"&gt;Informaci&oacute;n&lt;/span&gt;</code>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="label label-inverse">Inverso</span>
+        </td>
+        <td>
+          <code>&lt;span class="label label-inverse"&gt;Inverso&lt;/span&gt;</code>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+
+<!-- Badges
+================================================== -->
+<section id="badges">
+  <div class="page-header">
+    <h1>Emblemas (Badges) <small>Indicadores y recuentos sin leer</small></h1>
+  </div>
+  <div class="row">
+    <div class="span4">
+      <h3>Sobre</h3>
+      <p>Los emblemas son componentes peque&ntilde;os e individuales que muestran un indicador o una cuenta de alg&uacute;n tipo. Se encuentran normalmente en clientes email como Mail.app o en aplicaciones m&oacute;viles para notificaciones push.</p>
+    </div><!-- /.span -->
+    <div class="span8">
+      <h3>Las clases disponibles</h3>
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Ejemplo</th>
+            <th>C&oacute;digo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              Por Defecto
+            </td>
+            <td>
+              <span class="badge">1</span>
+            </td>
+            <td>
+              <code>&lt;span class="badge"&gt;1&lt;/span&gt;</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Éxito
+            </td>
+            <td>
+              <span class="badge badge-success">2</span>
+            </td>
+            <td>
+              <code>&lt;span class="badge badge-success"&gt;2&lt;/span&gt;</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Advertencia
+            </td>
+            <td>
+              <span class="badge badge-warning">4</span>
+            </td>
+            <td>
+              <code>&lt;span class="badge badge-warning"&gt;4&lt;/span&gt;</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Error
+            </td>
+            <td>
+              <span class="badge badge-error">6</span>
+            </td>
+            <td>
+              <code>&lt;span class="badge badge-error"&gt;6&lt;/span&gt;</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Informaci&oacute;n
+            </td>
+            <td>
+              <span class="badge badge-info">8</span>
+            </td>
+            <td>
+              <code>&lt;span class="badge badge-info"&gt;8&lt;/span&gt;</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Inverso
+            </td>
+            <td>
+              <span class="badge badge-inverse">10</span>
+            </td>
+            <td>
+              <code>&lt;span class="badge badge-inverse"&gt;10&lt;/span&gt;</code>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+</section>
+
+
+
+<!-- Typographic components
+================================================== -->
+<section id="typography">
+  <div class="page-header">
+    <h1>Componentes tipogr&aacute;ficos <small>Encabezamiento de p&aacute;gina y unidad principal (hero unit)  para segmentar contenido</small></h1>
+  </div>
+  <h2>Unidad principal (Hero Unit)</h2>
+  <div class="row">
+    <div class="span4">
+      <p>Boostrap proporciona un componente ligero y flexible llamado unidad principal (hero unit) para exhibir contenido en tu sitio. Funciona bien en sitios de marqueting y de contenido pesado.</p>
+      <h3>Etiquetado</h3>
+      <p>Envuelve tu contenido en un <code>div</code> como este:</p>
+<pre class="prettyprint linenums">
+&lt;div class="hero-unit"&gt;
+  &lt;h1&gt;Heading&lt;/h1&gt;
+  &lt;p&gt;Tagline&lt;/p&gt;
+  &lt;p&gt;
+    &lt;a class="btn btn-primary btn-large"&gt;
+      Learn more
+    &lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+    <div class="span8">
+      <div class="hero-unit">
+        <h1>¡Hola, Mundo!</h1>
+        <p>Esta es una unidad principal simple, un componente con estilo jumbo simple para llamar atenci&oacute;n extra para contenido o informaci&oacute;n destacado.</p>
+        <p><a class="btn btn-primary btn-large">Aprende m&aacute;s</a></p>
+      </div>
+    </div>
+  </div><!-- /row -->
+  <h2>Encabezado de página</h2>
+  <div class="row">
+    <div class="span4">
+      <p>Una estructura simple para un <code>h1</code> para dar espacio adecuadamente y segmentar secciones de contenido en una p&aacute;gina. Puede utilizar el elemento por defecto de <code>h1</code> <code>small</code>, como tambi&eacute;n muchos otros componentes (con estilos adicionales).</p>
+    </div>
+    <div class="span8">
+      <div class="page-header">
+        <h1>Ejemplo de encabezado de p&aacute;gina  <small>Subtexto para encabezamiento</small></h1>
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="page-header"&gt;
+  &lt;h1&gt;Example page header&lt;/h1&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+  </div><!-- /row -->
+</section>
+
+
+
+<!-- Thumbnails
+================================================== -->
+<section id="thumbnails">
+  <div class="page-header">
+    <h1>Thumbnails (miniaturas de imágenes) <small>Grids para im&aacute;genes, videos, texto, y m&aacute;s</small></h1>
+  </div>
+
+  <div class="row">
+    <div class="span6">
+      <h2>Thumbnails por defecto</h2>
+      <p>Por defecto, las miniaturas de imagen de Boostrap est&aacute;n dise&ntilde;adas para exhibir im&aacute;genes enlazadas con un etiquetado m&iacute;nimo requerido.</p>
+      <ul class="thumbnails">
+        <li class="span3">
+          <a href="#" class="thumbnail">
+            <img src="http://placehold.it/260x180" alt="">
+          </a>
+        </li>
+        <li class="span3">
+          <a href="#" class="thumbnail">
+            <img src="http://placehold.it/260x180" alt="">
+          </a>
+        </li>
+        <li class="span3">
+          <a href="#" class="thumbnail">
+            <img src="http://placehold.it/260x180" alt="">
+          </a>
+        </li>
+        <li class="span3">
+          <a href="#" class="thumbnail">
+            <img src="http://placehold.it/260x180" alt="">
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="span6">
+      <h2>Altamente personalizable</h2>
+      <p>Con un poco de etiquetado extra, es posible a&ntilde;adir cualquier tipo de contenido HTML como encabezameintos, p&aacute;rrafos o botones en minitaturas de imagen.</p>
+      <ul class="thumbnails">
+        <li class="span3">
+          <div class="thumbnail">
+            <img src="http://placehold.it/260x180" alt="">
+            <div class="caption">
+              <h5>Etiqueta Thumbnail</h5>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a href="#" class="btn btn-primary">Acci&oacute;n</a> <a href="#" class="btn">Acci&oacute;n</a></p>
+            </div>
+          </div>
+        </li>
+        <li class="span3">
+          <div class="thumbnail">
+            <img src="http://placehold.it/260x180" alt="">
+            <div class="caption">
+              <h5>Etiqueta Thumbnail</h5>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a href="#" class="btn btn-primary">Acci&oacute;n</a> <a href="#" class="btn">Acci&oacute;n</a></p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="span4">
+      <h3>Por qu&eacute; usar thumbnails</h3>
+      <p>Las miniaturas de im&aacute;gen (anteriormente <code>.media-grid</code> hasta v1.4) son unos grids ideales para fotos o videos, resultados de b&uacute;squeda de im&aacute;genes, productos en venta, y mucho m&aacute;s. Pueden ser enlaces de contenido est&aacute;tico.</p>
+    </div>
+    <div class="span4">
+      <h3>Etiquetado simple y flexible</h3>
+      <p>El etiquetado de miniaturas de im&aacute;gen es simple&mdash;un <code>ul</code> con cualquier n&uacute;mero de elementos <code>li</code> es todo lo que se requiere. Tambi&eacute;n es s&uacute;per flexible, y permite que cualquier tipo de contenido con solo un poco m&aacute;s de etiquetado envuelva tus contenidos.</p>
+    </div>
+    <div class="span4">
+      <h3>Usos de los tama&ntilde;os de las columnas de grid</h3>
+      <p>&Uacute;ltimamente, los componentes thumbnail utilizan un sistema de clases de grid ya existente &mdash; como <code>.span2</code> o <code>.span3</code>&mdash;para el control de las dimensiones de  los thumbnails.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="span6">
+      <h2>El etiquetado</h2>
+      <p>Como se ha mencionado anteriormente, el etiquetado requerido para las miniaturas de im&aacute;genes es ligero y muy directo. Aqu&iacute; tienes como se ve la aplicaci&oacute;n por defecto <strong>de im&aacute;genes enlazadas</strong>:</p>
+<pre class="prettyprint linenums">
+&lt;ul class="thumbnails"&gt;
+  &lt;li class="span3"&gt;
+    &lt;a href="#" class="thumbnail"&gt;
+      &lt;img src="http://placehold.it/260x180" alt=""&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+      <p>Para personalizar el contenido de HTML en miniaturas de imagen, el etiquetado cambia muy poco. Para permitir  el contenido de nivel de bloque en cualquier lugar, cambiamos el <code>&lt;a&gt;</code> por el <code>&lt;div&gt;</code> así:</p>
+<pre class="prettyprint linenums">
+&lt;ul class="thumbnails"&gt;
+  &lt;li class="span3"&gt;
+    &lt;div class="thumbnail"&gt;
+      &lt;img src="http://placehold.it/260x180" alt=""&gt;
+      &lt;h5&gt;Thumbnail label&lt;/h5&gt;
+      &lt;p&gt;Thumbnail caption right here...&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+    </div>
+    <div class="span6">
+      <h2>M&aacute;s ejemplos</h2>
+      <p>Explora todas tus opciones con las diferentes clases de grid disponibles. Puedes mezclar y combinar diferentes tama&ntilde;os, tambi&eacute;n.</p>
+      <ul class="thumbnails">
+        <li class="span4">
+          <a href="#" class="thumbnail">
+            <img src="http://placehold.it/360x268" alt="">
+          </a>
+        </li>
+        <li class="span2">
+          <a href="#" class="thumbnail">
+            <img src="http://placehold.it/160x120" alt="">
+          </a>
+        </li>
+        <li class="span2">
+          <a href="#" class="thumbnail">
+            <img src="http://placehold.it/160x120" alt="">
+          </a>
+        </li>
+        <li class="span2">
+          <a href="#" class="thumbnail">
+            <img src="http://placehold.it/160x120" alt="">
+          </a>
+        </li>
+        <li class="span2">
+          <a href="#" class="thumbnail">
+            <img src="http://placehold.it/160x120" alt="">
+          </a>
+        </li>
+        <li class="span2">
+          <a href="#" class="thumbnail">
+            <img src="http://placehold.it/160x120" alt="">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</section>
+
+
+
+<!-- Alerts & Messages
+================================================== -->
+<section id="alerts">
+  <div class="page-header">
+    <h1>Alertas <small>Estilos para el éxito (success), advertencias, y mensajes de error</small></h1>
+  </div>
+
+  <h2>Predeterminados ligeros</h2>
+  <div class="row">
+    <div class="span4">
+      <h3>Clase base re-escritas</h3>
+      <p>Con Boostrap 2, hemos simplificado la clase base: <code>.alert</code> en lugar de <code>.alert-message</code>. Tambi&eacute;n hemos reducido el etiquetado m&iacute;nimo requerido &mdash;no se requiere <code>&lt;p&gt;</code> por defecto, a&ntilde;ade un <code>&lt;div&gt;</code> exerior.</p>
+      <h3>Mensaje de alerta individual</h3>
+      <p>Para un componente m&aacute;s durable con menos c&oacute;digo, hemos eliminado la apariencia diferenciadora para alertas de bloque, mensajes que vienen con m&aacute;s texto de relleno y m&aacute;s t&iacute;pico. La clase también se ha cambiado a <code>.alert-block</code>.</p>
+      <hr>
+      <h3>Va bien con javascript</h3>
+      <p>Bootstrap comes with a great jQuery plugin that supports alert messages, making dismissing them quick and easy.</p>
+      <p><a class="btn js-btn" href="./javascript.html#alerts">Obt&eacute;n el plugin &raquo;</a></p>
+    </div>
+    <div class="span8">
+      <h3>Ejemplos de alertas</h3>
+      <p>Envuelve tu mensaje y un icono cerrado opcional en un div con una simple clase.</p>
+      <div class="alert">
+        <a class="close" data-dismiss="alert">&times;</a>
+        <strong>¡Advertencia!</strong> Mejor compru&eacute;balo t&uacute; mismo, no parece que veas muy bien.
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert"&gt;
+  &lt;a class="close" data-dismiss="alert"&gt;&times;&lt;/a&gt;
+  &lt;strong&gt;Warning!&lt;/strong&gt; Best check yo self, you're not looking too good.
+&lt;/div&gt;
+</pre>
+      <p>F&aacute;cilmente extienden mensajes de texto est&aacute;ndar con dos clases opcionales: <code>.alert-block</code> para m&aacute;s relleno y controles de texto y <code>.alert-heading</code> para combinar un  encabezamiento.</p>
+      <div class="alert alert-block">
+        <a class="close" data-dismiss="alert">&times;</a>
+        <h4 class="alert-heading">¡Advertencia!</h4>
+        <p>Mejor compru&eacute;balo t&uacute; mismo, no parece que veas muy bien. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert alert-block"&gt;
+  &lt;a class="close" data-dismiss="alert"&gt;&times;&lt;/a&gt;
+  &lt;h4 class="alert-heading"&gt;Warning!&lt;/h4&gt;
+  Best check yo self, you're not...
+&lt;/div&gt;
+</pre>
+    </div>
+  </div>
+
+  <h2>Alternativas contextuales  <small>A&ntilde;adir clases opcionales para cambiar una connotación de alerta</small></h2>
+  <div class="row">
+    <div class="span4">
+      <h3>Error o peligro</h3>
+      <div class="alert alert-error">
+        <a class="close" data-dismiss="alert">&times;</a>
+        <strong>&iexcl;Oh, no!</strong> Cambia un par de cosas e intenta enviarlo otra vez.
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert alert-error"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+    </div>
+    <div class="span4">
+      <h3>Éxito (Success)</h3>
+      <div class="alert alert-success">
+        <a class="close" data-dismiss="alert">&times;</a>
+        <strong>&iexcl;Bien hecho!</strong> Has le&iacute;do satisfactoriamente este mensaje de alerta importante.
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert alert-success"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+    </div>
+    <div class="span4">
+      <h3>Informaci&oacute;n</h3>
+      <div class="alert alert-info">
+        <a class="close" data-dismiss="alert">&times;</a>
+        <strong>&iexcl;Atenci&oacute;n!</strong> Esta alerta necesita tu atenci&oacute;n, pero no es muy importante.
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert alert-info"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+    </div>
+  </div>
+
+</section>
+
+
+
+<!-- Progress bars
+================================================== -->
+<section id="progress">
+  <div class="page-header">
+    <h1>Barras de progreso  <small>Para cargar, redireccionar o para una acci&oacute;n de estado</small></h1>
+  </div>
+
+  <h2>Ejemplos y etiquetado</h2>
+  <div class="row">
+    <div class="span4">
+      <h3>B&aacute;sico</h3>
+      <p>Progreso de barra por defecto con un degradado vertical</p>
+      <div class="progress">
+        <div class="bar" style="width: 60%;"></div>
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="progress"&gt;
+  &lt;div class="bar"
+       style="width: 60%;"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+    <div class="span4">
+      <h3>A rayas</h3>
+      <p>Usa un degradado para crear un efecto a rayas (no IE).</p>
+      <div class="progress progress-striped">
+        <div class="bar" style="width: 20%;"></div>
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="progress progress-striped"&gt;
+  &lt;div class="bar"
+       style="width: 20%;"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+    <div class="span4">
+      <h3>Animado</h3>
+      <p>Toma este ejemplo a rayas y an&iacute;malo (no IE).</p>
+      <div class="progress progress-striped active">
+        <div class="bar" style="width: 45%"></div>
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="progress progress-striped
+     active"&gt;
+  &lt;div class="bar"
+       style="width: 40%;"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+  </div>
+
+  <h2>Opciones y soporte de navegador</h2>
+  <div class="row">
+    <div class="span3">
+      <h3>Colores adicionales</h3>
+      <p>Las barras de progreso utilizan algunos de los mismos botones y clases de alertas para estilos consistentes.</p>
+      <div class="progress progress-info" style="margin-bottom: 9px;">
+        <div class="bar" style="width: 20%"></div>
+      </div>
+      <div class="progress progress-success" style="margin-bottom: 9px;">
+        <div class="bar" style="width: 40%"></div>
+      </div>
+      <div class="progress progress-warning" style="margin-bottom: 9px;">
+        <div class="bar" style="width: 60%"></div>
+      </div>
+      <div class="progress progress-danger" style="margin-bottom: 9px;">
+        <div class="bar" style="width: 80%"></div>
+      </div>
+    </div>
+     <div class="span3">
+      <h3>Barras a rayas</h3>
+      <p>Similares a los colores s&oacute;lidos, tenemos varias barras de progreso a rayas.</p>
+      <div class="progress progress-info progress-striped" style="margin-bottom: 9px;">
+        <div class="bar" style="width: 20%"></div>
+      </div>
+      <div class="progress progress-success progress-striped" style="margin-bottom: 9px;">
+        <div class="bar" style="width: 40%"></div>
+      </div>
+      <div class="progress progress-warning progress-striped" style="margin-bottom: 9px;">
+        <div class="bar" style="width: 60%"></div>
+      </div>
+      <div class="progress progress-danger progress-striped" style="margin-bottom: 9px;">
+        <div class="bar" style="width: 80%"></div>
+      </div>
+    </div>
+    <div class="span3">
+      <h3>Comportamiento</h3>
+      <p>Las barras de progreso utilizan transiciones CSS, de manera que si quieres ajustar din&aacute;micamente el ancho a trav&eacute;s de javascript, se aplicar&aacute; el tama&ntilde;o suavemente.</p>
+      <p>Si usas la clase <code>.active</code> tus barras de progreso <code>.progress-striped</code> mostrar&aacute;n rayas de izquierda a derecha.</p>
+    </div>
+    <div class="span3">
+      <h3>Soporte de navegadaor</h3>
+      <p>Las barras de progreso usan degradados CSS3, transiciones y animaciones para conseguir sus efectos. Estas caracter&iacute;sticas no se soportan en IE7-9 o versiones m&aacute;s antiguas de Firefox.</p>
+      <p>Opera e IE no son compatibles con las animaciones en este momento.</p>
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+<!-- Miscellaneous
+================================================== -->
+<section id="misc">
+  <div class="page-header">
+    <h1>Otros (Miscellaneous) <small>Compomentes de utilidad ligeros</small></h1>
+  </div>
+  <div class="row">
+    <div class="span4">
+      <h2>Cajas (Wells)</h2>
+      <p>Usa esta caja como efecto simple en un elemento para darle un efecto intercalado.</p>
+      <div class="well">
+        &iexcl;Mira, soy una caja!
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="well"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+    </div><!--/span-->
+    <div class="span4">
+      <h2>Icono cerrado</h2>
+      <p>Usa un icono cerrado gen&eacute;rico para un contenido desechable como los modales o alertas.</p>
+      <p><a class="close" style="float: none;">&times;</a></p>
+<pre class="prettyprint linenums">&lt;a class="close"&gt;&amp;times;&lt;/a&gt;</pre>
+    </div><!--/span-->
+  </div><!--/row-->
+</section>
+
+
+      <!-- Footer
+      ================================================== -->
+      <footer class="footer">
+        <p class="pull-right"><a href="#">ir Arriba</a></p>
+        
+        <p>TRADUCCIÓN</p>
+        <p>Todos estos documentos han sido traducido por el equipo de Animartec.com</p>
+        
+        
+        <p>ORIGINAL</p>
+        <p>Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank">@twitter</a> by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
+        <p>Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <p>Icons from <a href="http://glyphicons.com">Glyphicons Free</a>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+      </footer>   
+
+    </div><!-- /container -->
+
+ <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> 
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+   
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/application.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,22 @@
+// ==ClosureCompiler==
+// @compilation_level WHITESPACE_ONLY
+// @output_file_name default.js
+// @code_url http://www.internoma.com/tutorial-bootstrap/assets/js/jquery.js
+// @code_url http://www.internoma.com/tutorial-bootstrap/assets/js/smoothscroll.js
+// @code_url http://www.internoma.com/tutorial-bootstrap/assets/js/jquery.mb.mediaEmbedder.js
+// @code_url http://www.internoma.com/tutorial-bootstrap/assets/js/bootstrap-transition.js
+// @code_url http://www.internoma.com/tutorial-bootstrap/assets/js/bootstrap-alert.js
+// @code_url http://www.internoma.com/tutorial-bootstrap/assets/js/bootstrap-modal.js
+// @code_url http://www.internoma.com/tutorial-bootstrap/assets/js/bootstrap-dropdown.js
+// @code_url http://www.internoma.com/tutorial-bootstrap/assets/js/bootstrap-scrollspy.js
+// @code_url http://www.internoma.com/tutorial-bootstrap/assets/js/bootstrap-tab.js
+// @code_url http://www.internoma.com/tutorial-bootstrap/assets/js/bootstrap-tooltip.js
+// @code_url http://www.internoma.com/tutorial-bootstrap/assets/js/bootstrap-popover.js
+// @code_url http://www.internoma.com/tutorial-bootstrap/assets/js/bootstrap-button.js
+// @code_url http://www.internoma.com/tutorial-bootstrap/assets/js/bootstrap-collapse.js
+// @code_url http://www.internoma.com/tutorial-bootstrap/assets/js/bootstrap-carousel.js
+// @code_url http://www.internoma.com/tutorial-bootstrap/assets/js/bootstrap-typeahead.js
+// @code_url http://www.internoma.com/tutorial-bootstrap/assets/js/jquery.easing.1.3.js
+// @code_url http://www.internoma.com/tutorial-bootstrap/assets/js/jquery.quicksand.js
+// @code_url http://www.internoma.com/tutorial-bootstrap/assets/js/portfolio-main.js
+// ==/ClosureCompiler==

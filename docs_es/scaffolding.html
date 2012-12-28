@@ -1,0 +1,677 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Estructura escalable · Twitter Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body data-spy="scroll" data-target=".subnav" data-offset="50">
+
+
+   <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="./index.html">Bootstrap</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active">
+                <a href="./index.html">Inicio</a>
+              </li>
+              <li class="">
+                <a href="./scaffolding.html">Adaptable</a>
+              </li>
+              <li class="">
+                <a href="./base-css.html">Base CSS</a>
+              </li>
+              <li class="">
+                <a href="./components.html">Componentes</a>
+              </li>
+              <li class="">
+                <a href="./javascript.html">Javascript plugins</a>
+              </li>
+              <li class="">
+                <a href="./less.html">Usando LESS</a>
+              </li>
+              <li class="divider-vertical"></li>
+              <li class="">
+                <a href="./download.html">Personalizar</a>
+              </li>
+              <li class="">
+                <a href="./examples.html">Ejemplos</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>    <div class="container">
+
+      <!-- Masthead
+      ================================================== -->
+      <header class="jumbotron subhead" id="overview">
+        <h1>Estructura adaptable (Scaffolding)</h1>
+        <p class="lead">Boostrap se construye en una tabla de 12 columnas adaptable. También hemos incluido diseños con un ancho fijo o fluido basados en ese sistema.</p>
+        <div class="subnav">
+          <ul class="nav nav-pills">
+            <li><a href="#global">Estilos globales</a></li>
+            <li><a href="#gridSystem">Sistema Grid</a></li>
+            <li><a href="#fluidGridSystem">Sistema Grid fluido</a></li>
+            <li><a href="#gridCustomization">Personalizando</a></li>
+            <li><a href="#layouts">Capas</a></li>
+            <li><a href="#responsive">Diseño Adaptable</a></li>
+          </ul>
+        </div>
+      </header>
+
+
+
+
+<!-- Global Bootstrap settings
+================================================== -->
+<section id="global">
+  <div class="page-header">
+    <h1>Estilos globales <small>para resetear el CSS, tipografía y enlaces</small></h1>
+  </div>
+  <div class="row">
+    <div class="span4">
+      <h2>Requiere doctype HTML5</h2>
+      <p>Bootstrap utiliza los elementos HTML y las propiedades CSS que requieren el uso de un doctype HTML5. Asegúrate de incluirlo al principio de cada página con Bootstrap en tu proyecto.</p>
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  ...
+&lt;/html&gt;
+</pre>
+    </div><!-- /.span -->
+    <div class="span4">
+      <h2>Tipografía y enlaces</h2>
+      <p>Dentro del archivo <strong>scaffolding.less</strong>, seteamos una estructura básica, tipografía y estilos de enlaces. Específicamente, nosotros:</p>
+      <ul>
+        <li>Eliminamos los márgenes del <code>body</code></li>
+        <li>Seteamos <code>background-color: white;</code> en el <code>body</code></li>
+        <li>Usamos los atributos <code>@baseFontFamily</code>, <code>@baseFontSize</code>, y <code>@baseLineHeight</code> como nuestra tipografía básica</li>
+        <li>Seteamos el color de enlaces con <code>@linkColor</code> y aplicamos linea de subrayado al enlace sólo cuando se hace un <code>:hover</code></li>
+      </ul>
+    </div><!-- /.span -->
+    <div class="span4">
+      <h2>Reset via Normalize</h2>
+      <p>En cuanto a Boostrap 2, el reajuste tradicional CSS ha evolucionado para usar elementos desde <a href="http://necolas.github.com/normalize.css/" target="_blank">Normalize.css</a>, un proyecto por  <a href="http://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> que también tiene el <a href="http://html5boilerplate.com" target="_blank">HTML5 Boilerplate</a>.</p>
+      <p>El nuevo reajuste todavía se puede encontrar en <strong>reset.less</strong>, pero con muchos de estos elementos han sido suprimidos para ser más breves y exactos. </p>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+</section>
+
+
+
+
+<!-- Grid system
+================================================== -->
+<section id="gridSystem">
+  <div class="page-header">
+    <h1>Sistema Grid por defecto <small>12 columnas con un giro adaptable</small></h1>
+  </div>
+
+  <div class="row show-grid">
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+  </div>
+  <div class="row show-grid">
+    <div class="span4">4</div>
+    <div class="span4">4</div>
+    <div class="span4">4</div>
+  </div>
+  <div class="row show-grid">
+    <div class="span4">4</div>
+    <div class="span8">8</div>
+  </div>
+  <div class="row show-grid">
+    <div class="span6">6</div>
+    <div class="span6">6</div>
+  </div>
+  <div class="row show-grid">
+    <div class="span12">12</div>
+  </div>
+  <div class="row">
+    <div class="span4">
+      <p>El sistema de grids por defecto proporcionado como parte de Boostrap es de 940px de ancho, <strong>una tabla de 12 columnas</strong>.</p>
+      <p>También tiene variables adaptables para varios dispositivos y resoluciones: teléfono, Tablets, dispositivos en posición horizontal y netbooks, y pantallas de ordenadores de escritorio.</p>
+    </div><!-- /.span -->
+    <div class="span4">
+<pre class="prettyprint linenums">
+&lt;div class="row"&gt;
+  &lt;div class="span4"&gt;...&lt;/div&gt;
+  &lt;div class="span8"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div><!-- /.span -->
+    <div class="span4">
+      <p>Como se muestra aquí, el diseño básico se puede crear con dos columnas (grids), cada una suman y abarcan un número de 12 grids fundamentales que definimos como parte de nuestro sistema de tabla. </p>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+
+  <br>
+
+  <h2>Columnas de compensación</h2>
+  <div class="row show-grid">
+    <div class="span4">4</div>
+    <div class="span4 offset4">4 offset 4</div>
+  </div><!-- /row -->
+  <div class="row show-grid">
+    <div class="span3 offset3">3 offset 3</div>
+    <div class="span3 offset3">3 offset 3</div>
+  </div><!-- /row -->
+  <div class="row show-grid">
+    <div class="span8 offset4">8 offset 4</div>
+  </div><!-- /row -->
+<pre class="prettyprint linenums">
+&lt;div class="row"&gt;
+  &lt;div class="span4"&gt;...&lt;/div&gt;
+  &lt;div class="span4 offset4"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+  <br>
+
+  <h2>Columnas anidadas</h2>
+  <div class="row">
+    <div class="span6">
+      <p>Con el sistema de tabla estático (no-fluido) en Boostrap, la anidación es fácil. Para anidar tu contenido, solo añade el nuevo <code>.row</code> y pon el <code>.span*</code> dentro de la columna existente <code>.span*</code></p>
+      <h3>Ejemplo</h3>
+      <p>Las filas anidadas deberían incluir un conjunto de grids que se añaden al número de grids de su pariente. Por ejemplo, dos columnas <code>.span3</code> anidadas deberían colocarse dentro de <code>.span6</code>.</p>
+      <div class="row show-grid">
+        <div class="span6">
+          Columna 1 nivel 1
+          <div class="row show-grid">
+            <div class="span3">
+              Columna 1 del nivel 2
+            </div>
+            <div class="span3">
+              Columna 2 del nivel 2
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.span -->
+    <div class="span6">
+<pre class="prettyprint linenums">
+&lt;div class="row"&gt;
+  &lt;div class="span12"&gt;
+    Level 1 of column
+    &lt;div class="row"&gt;
+      &lt;div class="span6"&gt;Level 2&lt;/div&gt;
+      &lt;div class="span6"&gt;Level 2&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+</section>
+
+
+
+<!-- Fluid grid system
+================================================== -->
+<section id="fluidGridSystem">
+  <div class="page-header">
+    <h1>Sistema Grid Fluido<small>12 columnas adaptables, basadas en porcentaje</small></h1>
+  </div>
+
+  <h2>Columnas fluidas</h2>
+  <div class="row-fluid show-grid">
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+  </div>
+  <div class="row-fluid show-grid">
+    <div class="span4">4</div>
+    <div class="span4">4</div>
+    <div class="span4">4</div>
+  </div>
+  <div class="row-fluid show-grid">
+    <div class="span4">4</div>
+    <div class="span8">8</div>
+  </div>
+  <div class="row-fluid show-grid">
+    <div class="span6">6</div>
+    <div class="span6">6</div>
+  </div>
+  <div class="row-fluid show-grid">
+    <div class="span12">12</div>
+  </div>
+
+  <div class="row">
+    <div class="span4">
+      <h3>Porcentajes, no pixeles</h3>
+      <p>El sistema de tabla fluida utiliza porcentajes para los anchos de la columna en lugar de pixeles fijos. También tiene las mismas variaciones adaptables como nuestro sistema de tabla fija, asegurando proporciones adecuadas para las resoluciones y dispositivos clave de pantalla.</p>
+    </div><!-- /.span -->
+    <div class="span4">
+      <h3>Filas fluidas</h3>
+      <p>Haz cualquier fila fluida simplemente cambiando <code>.row</code> pro <code>.row-fluid</code>. Las columnas permanecerán iguales, haciéndolo muy directo para cambiar entre diseños fijos y fluidos.</p>
+    </div><!-- /.span -->
+    <div class="span4">
+      <h3>Etiquetado</h3>
+<pre class="prettyprint linenums">
+&lt;div class="row-fluid"&gt;
+  &lt;div class="span4"&gt;...&lt;/div&gt;
+  &lt;div class="span8"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+
+  <h2>Anidación fluida</h2>
+  <div class="row">
+    <div class="span6">
+      <p>Anidar con tablas fluidas es un poco diferente: el número de columnas anidadas no es necesario que  coincida con el nivel superior. En su lugar, tus columnas se reajustan a cada nivel porque cada fila llega al 100% de la grid pariente</p>
+      <div class="row-fluid show-grid">
+        <div class="span12">
+          Fluida 12
+          <div class="row-fluid show-grid">
+            <div class="span6">
+              Fluida 6
+            </div>
+            <div class="span6">
+              Fluida 6
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.span -->
+    <div class="span6">
+<pre class="prettyprint linenums">
+&lt;div class="row-fluid"&gt;
+  &lt;div class="span12"&gt;
+    Level 1 of column
+    &lt;div class="row-fluid"&gt;
+      &lt;div class="span6"&gt;Level 2&lt;/div&gt;
+      &lt;div class="span6"&gt;Level 2&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+
+</section>
+
+
+
+<!-- Customizaton
+================================================== -->
+<section id="gridCustomization">
+  <div class="page-header">
+    <h1>Personalización del Grid</h1>
+  </div>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Variable</th>
+        <th>Valor por defecto</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>@gridColumns</code></td>
+        <td>12</td>
+        <td>Número de columnas</td>
+      </tr>
+      <tr>
+        <td><code>@gridColumnWidth</code></td>
+        <td>60px</td>
+        <td>Ancho de cada columna</td>
+      </tr>
+      <tr>
+        <td><code>@gridGutterWidth</code></td>
+        <td>20px</td>
+        <td>Espacio negativo entre columnas</td>
+      </tr>
+      <tr>
+        <td><code>@siteWidth</code></td>
+        <td><em>Suma de todas las columnas y espacios entre éstas.</em></td>
+        <td>Cuenta el numero de columnas y espacios para poner el ancho correcto <code>.container-fixed()</code></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="row">
+    <div class="span4">
+      <h3>Variables en LESS</h3>
+      <p>Creadas en Boostrap hay unas variables útiles para personalizar el sistema de grids por defecto de 940px, explicadas anteriormente. Todas las variables para la tabla se almacenan en variables.less.</p>
+    </div><!-- /.span -->
+    <div class="span4">
+      <h3>Cómo personalizarla</h3>
+      <p>Modificar la tabla significa cambiar las tres variables <code>@grid*</code> recompilar Boostrap. ambia las variables de la tabla en variables.less y utiliza una de las <a href="less.html#compiling">cuatro maneras explicadas para recompilar</a>. Si estás añadiendo más grids, asegúrate de añadir CSS para aquellas en grid.less.</p>
+    </div><!-- /.span -->
+    <div class="span4">
+      <h3>Personalización del grid adaptable</h3>
+      <p>La personalización de la tabla solo funciona a un nivel por defecto, la tabla de 940px. Para mantener los aspectos adaptables de Boostrap, también tendrás que personalizar las tablas en responsive.less.</p>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+
+</section>
+
+
+
+<!-- Layouts (Default and fluid)
+================================================== -->
+<section id="layouts">
+  <div class="page-header">
+    <h1>Plantillas <small>Diseños básicos para crear páginas web</small></h1>
+  </div>
+
+  <div class="row">
+    <div class="span6">
+      <h2>Plantilla Fija</h2>
+      <p>El diseño simple y por defecto de 9410px para cualquier página web o página porporcionada por un <code>&lt;div class="container"&gt;</code>individual.</p>
+      <div class="mini-layout">
+        <div class="mini-layout-body"></div>
+      </div>
+<pre class="prettyprint linenums">
+&lt;body&gt;
+  &lt;div class="container"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/body&gt;
+</pre>
+    </div><!-- /.span -->
+    <div class="span6">
+      <h2>Plantilla Fluída</h2>
+      <p>El <code>&lt;div class="container-fluid"&gt;</code> da una estructura de página flexible, con anchos mínimos y máximos, y una barra a la izquierda. Es fantástico para aplicaciones y documentos.</p>
+      <div class="mini-layout fluid">
+        <div class="mini-layout-sidebar"></div>
+        <div class="mini-layout-body"></div>
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="container-fluid"&gt;
+  &lt;div class="row-fluid"&gt;
+    &lt;div class="span2"&gt;
+      &lt;!--Sidebar content--&gt;
+    &lt;/div&gt;
+    &lt;div class="span10"&gt;
+      &lt;!--Body content--&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+</section>
+
+
+
+
+<!-- Responsive design
+================================================== -->
+<section id="responsive">
+  <div class="page-header">
+    <h1>Diseño Adaptable <small> <code>media queries</code> para varios dispositivos y resoluciones</small></h1>
+  </div>
+  <!-- Supported devices -->
+  <div class="row">
+    <div class="span4">
+      <p><img src="assets/img/responsive-illustrations.png" alt="Responsive devices"></p>
+      <h3>¿Qué hacen los medias queries?</h3>
+      <p>MLos media queries permiten la personalización basada en CSS en un número de condiciones – proporciones, anchos, tipo de diseño, etc. – pero normalmente se concentra alrededor del <code>min-width</code> y <code>max-width</code> (mínimo y máximo de ancho).</p>
+      <ul>
+        <li>Modifica el ancho de grid en nuestr grid</li>
+        <li>Amontona elementos en lugar de tenerlos suspendido cuando es necesario</li>
+        <li>Ajusta el tamaño de los encabezamientos y del texto para que sea más adecuado para los dispositivos. </li>
+      </ul>
+      <p>tiliza media queries responsablemente y solo como el punto de partida de tus audiencias móviles. Para proyectos más largos, considera las bases de código y no las capas de media queries.</p>
+    </div><!-- /.span -->
+    <div class="span8">
+      <h2>Dispositivos Soportados</h2>
+      <p>Boostrap sostiene media queries útiles en un archivo individual para ayudar que tus proyectos se hagan adecuadamente en diferentes dispositivos y en resoluciones de pantalla. Aquí tienes lo que está incluido:</p>
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Etiqueta</th>
+            <th>Ancho de plantilla</th>
+            <th>Ancho de columna</th>
+            <th>Ancho de separación</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Smartphones</td>
+            <td>480px e inferiores</td>
+            <td class="muted" colspan="2">Columnas fluidas, sin ancho fijo</td>
+          </tr>
+          <tr>
+            <td>Smartphones a Tablets</td>
+            <td>767px e inferiores</td>
+            <td class="muted" colspan="2">Columnas fluidas, sin ancho fijo</td>
+          </tr>
+          <tr>
+            <td>Tablets (horizontal)</td>
+            <td>768px y superiores</td>
+            <td>42px</td>
+            <td>20px</td>
+          </tr>
+          <tr>
+            <td>Default</td>
+            <td>980px and up</td>
+            <td>60px</td>
+            <td>20px</td>
+          </tr>
+          <tr>
+            <td>Pantallas anchas</td>
+            <td>1200px y superiores</td>
+            <td>70px</td>
+            <td>30px</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Etiqueta META requerida </h3>
+      <p>Para asegurar que los dispositivos muestran las páginas receptivas adecuadamante, incluye el viewport de etiqueta meta.</p>
+      <pre class="prettyprint linenums">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</pre>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+
+  <br>
+
+  <!-- Media query code -->
+  <h2>Usando los media queries</h2>
+  <div class="row">
+    <div class="span4">
+      <p>Boostrap no incluye automáticamente estos media queries, pero entenderlos y añadirlos es muy fácil y requiere una instalación mínimal. Tienes un par de opciones para incluir las características adaptables de Boostrap:</p>
+      <ol>
+        <li>Usa la versión compilada receptiva <code>bootstrap-responsive.css</code></li>
+        <li>Añade @import "responsive.less" y recompila Bootstrap</li>
+        <li>Modifica y recompila responsive.less como un archivo separado</li>
+      </ol>
+      <p><strong>¿Por qué no incluirlo directamente?</strong> La verdad es que no es necesario que todo sea adaptable. En lugar de animar a los desarrolladores para que eliminen esta característica, pensamos que era mejor habilitarla.</p>
+    </div><!-- /.span -->
+    <div class="span8">
+<pre class="prettyprint linenums">
+  // Hasta smartphones de 480px
+  @media (max-width: 480px) { ... }
+
+  // de Smartphones a Tablets
+  @media (max-width: 768px) { ... }
+
+  // de Tablets a pantallas de desktops
+  @media (min-width: 768px) and (max-width: 980px) { ... }
+
+  // Pantallas anchas (desktops)
+  @media (min-width: 1200px) { .. }
+</pre>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+  <br>
+
+  <!-- Responsive utility classes -->
+  <h2>Adaptabilidad (Clases últiles)</h2>
+  <div class="row">
+    <div class="span4">
+      <h3>¿Qué son?</h2>
+      <p>Para un desarrollo móvil más rápido, utiliza estas clases de utilidad básicas para mostrar y esconder contenido en el dispositivo.</p>
+      <h3>¿Cuándo usarlas?</h2>
+      <p>Úsalas en una base limitada y evita crear versiones totalmente diferentes del mismo sitio. En su lugar, utilízalas para complementar cada presentación del dispositivo.</p>
+      <p>Por ejemplo, puedes mostrar un elemento <code>&lt;select&gt;</code> para diseños móviles nav, pero no en Tablets o escritorios.</p>
+    </div><!-- /.span -->
+    <div class="span8">
+      <h3>Clases de soporte</h3>
+      <p>Aquí se ve una tabla de las clases que incluimos y su efecto en un diseño media query dado (etiquetado por dispositivo). Se pueden encontrar en  <code>responsive.less</code>.</p>
+      <table class="table table-bordered table-striped responsive-utilities">
+        <thead>
+          <tr>
+            <th>Clase</th>
+            <th>Smartphones <small>480px and below</small></th>
+            <th>Tablets <small>767px and below</small></th>
+            <th>Desktops <small>768px and above</small></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th><code>.visible-phone</code></th>
+            <td class="is-visible">Visible</td>
+            <td class="is-hidden">Hidden</td>
+            <td class="is-hidden">Hidden</td>
+          </tr>
+          <tr>
+            <th><code>.visible-tablet</code></th>
+            <td class="is-hidden">Hidden</td>
+            <td class="is-visible">Visible</td>
+            <td class="is-hidden">Hidden</td>
+          </tr>
+          <tr>
+            <th><code>.visible-desktop</code></th>
+            <td class="is-hidden">Hidden</td>
+            <td class="is-hidden">Hidden</td>
+            <td class="is-visible">Visible</td>
+          </tr>
+          <tr>
+            <th><code>.hidden-phone</code></th>
+            <td class="is-hidden">Hidden</td>
+            <td class="is-visible">Visible</td>
+            <td class="is-visible">Visible</td>
+          </tr>
+          <tr>
+            <th><code>.hidden-tablet</code></th>
+            <td class="is-visible">Visible</td>
+            <td class="is-hidden">Hidden</td>
+            <td class="is-visible">Visible</td>
+          </tr>
+          <tr>
+            <th><code>.hidden-desktop</code></th>
+            <td class="is-visible">Visible</td>
+            <td class="is-visible">Visible</td>
+            <td class="is-hidden">Hidden</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Ejemplo</h3>
+      <p>Ajusta el tamaño de tu navegador o carga en diferentes dispositivos para comprobar las clases en la parte superior.</p>
+      <h4>Visible en...</h4>
+      <ul class="responsive-utilities-test">
+        <li>Phone<span class="visible-phone">&#10004; Phone</span></li>
+        <li>Tablet<span class="visible-tablet">&#10004; Tablet</span></li>
+        <li>Desktop<span class="visible-desktop">&#10004; Desktop</span></li>
+      </ul>
+      <h4>Oculto en...</h4>
+      <ul class="responsive-utilities-test hidden-on">
+        <li>Phone<span class="hidden-phone">&#10004; Phone</span></li>
+        <li>Tablet<span class="hidden-tablet">&#10004; Tablet</span></li>
+        <li>Desktop<span class="hidden-desktop">&#10004; Desktop</span></li>
+      </ul>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+
+      
+  <div class="row">
+    <div class="span4">
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+</section>
+
+
+       <!-- Footer
+      ================================================== -->
+      <footer class="footer">
+        <p class="pull-right"><a href="#">ir Arriba</a></p>
+        
+        <p>TRADUCCIÓN</p>
+        <p>Todos estos documentos han sido traducido por el equipo de Animartec.com</p>
+        
+        
+        <p>ORIGINAL</p>
+        <p>Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank">@twitter</a> by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
+        <p>Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <p>Icons from <a href="http://glyphicons.com">Glyphicons Free</a>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+      </footer>   
+    
+
+    </div><!-- /container -->
+
+
+  <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> 
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+   
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/application.js"></script>   
+
+  </body>
+</html>

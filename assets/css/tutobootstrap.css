@@ -1,0 +1,38 @@
+
+body
+{
+	background-image: url(../img/background-grill.png);
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+
+.sidebar-nav { padding: 9px 0; }
+
+section
+{
+	padding-top: 40px;
+	clear: both;
+}
+
+.bs-icon
+{
+	float: left;
+	margin: 7px 10px 0 0;
+	opacity: .8;
+}
+
+.modal-body { background-image: url(../img/background-grill.png); }
+
+.hero-unit
+{
+	background-image: url(../img/espanol.png);
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+.fblanco { background-color: #fff; }
+
+.audio {
+	text-align: right;
+	margin: 0;
+}
